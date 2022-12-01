@@ -15,17 +15,23 @@ function App() {
   return (
    <>
        <Router>
-        <Navbar />
+        <div className="navb" ><Navbar /></div>
+        
+       <div>
         <Routes>
+          
           <Route path="/" element={<Home />} />
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/ranks" elemnet={<Ranks />} />
           <Route path="/projects" element={<Catalogue />} />
+          
           {/* <Route
             path="/product-catalouge/product-page"
             element={<ProductPage />}
           /> */}
+          
         </Routes>
+        </div>
         {/* <Footer /> */}
       </Router>
    </>
