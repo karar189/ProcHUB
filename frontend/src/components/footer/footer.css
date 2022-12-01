@@ -1,0 +1,87 @@
+.footer {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+
+.logo {
+  height: 64px;
+
+}
+
+.left-side{
+  padding-left: 50px;;
+
+
+}
+
+.footer-text {
+  color: #f7e1ff;
+  padding: 10px;
+}
+
+.social-links {
+  padding-top: 30px;
+}
+
+.social-links a {
+  padding: 18px;
+}
+
+.right-side {
+  display: flex;
+  flex-direction: row;
+  padding-left: 150px;
+}
+
+.company {
+  display: flex;
+  flex-direction: column;
+  padding-right: 300px;
+  color: #f7e1ff;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  padding-right: 300px;
+  color: #f7e1ff;
+}
+
+.policies {
+  display: flex;
+  flex-direction: column;
+  color: #f7e1ff;
+}
+
+.headings {
+  padding-top: 15px;
+  padding-bottom: 69px;
+  font-size: 18px;
+  font-weight: bold;
+  background: linear-gradient(
+    90deg,
+    #eaaeff 7.59%,
+    #d1adff 42.39%,
+    #a9d6ff 70.31%,
+    #ffffff 100%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sub-heading {
+  padding-bottom: 30px;
+}
+
+
+.copyright{
+ color:#F7E1FF;
+ display: flex;
+ justify-content: center;
+ font-size: 10px;
+ padding-top:30px ;
+
+}

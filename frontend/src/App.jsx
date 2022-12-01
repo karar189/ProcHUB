@@ -7,6 +7,7 @@ import Blogs from "./pages/blogs/Blogs";
 import Ranks from "./pages/ranks/Ranks";
 import Navbar from "./components/navbar/Navbar";
 import Catalogue from "./pages/catalogue/catalogue";
+import Footer from "./components/footer/Footer";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -14,7 +15,9 @@ function App() {
   return (
     <>
       <Router>
-        <div className="navb">{/* <Navbar /> */}</div>
+        <div className="navb">
+          <Navbar />
+        </div>
 
         <div className="routesSection">
           <Routes>
@@ -29,7 +32,8 @@ function App() {
           /> */}
           </Routes>
         </div>
-        {/* <Footer /> */}
+
+        <Footer />
       </Router>
     </>
   );
