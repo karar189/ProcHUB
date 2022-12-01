@@ -7,6 +7,7 @@ import Blogs from './pages/blogs/Blogs';
 import Ranks from './pages/ranks/Ranks';
 import Navbar from './components/navbar/Navbar';
 import Catalogue from './pages/catalogue/catalogue';
+import Footer from './components/footer/Footer';
 
 
 function App() {
@@ -32,7 +33,8 @@ function App() {
           
         </Routes>
         </div>
-        {/* <Footer /> */}
+
+        <Footer/>
       </Router>
    </>
   );
