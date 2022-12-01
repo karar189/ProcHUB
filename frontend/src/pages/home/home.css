@@ -1,8 +1,167 @@
-body {
-  background-color: #1E1E1E;
-  overflow-x: hidden !important;
+.hero {
+  /* background-image: url(../../assets/apple-bg.svg); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+  width: 100vw;
+  background-color: #1e1e1e;
+  /* overflow-x: hidden !important; */
   width: 100vw !important;
   font-family: "Questrial", sans-serif;
   scrollbar-color: #57427d;
+  padding: 10px;
+}
+.heading {
+  font-family: "Anton";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 45px;
+  /* line-height: 80px; */
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  background: linear-gradient(
+    80deg,
+    #eaaeff 7.59%,
+    #d1adff 42.39%,
+    #a9d6ff 70.31%,
+    #ffffff 100.07%,
+    rgba(255, 255, 255, 0) 90.07%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.herotext h3 {
+  font-family: "Anton";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  background: linear-gradient(
+    90deg,
+    #eaaeff 7.59%,
+    #d1adff 42.39%,
+    #a9d6ff 70.31%,
+    #ffffff 90.07%,
+    rgba(255, 255, 255, 0) 90.07%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 
+.button-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  width: 300px;
+}
+.button-div button {
+  background: #171717;
+  backdrop-filter: blur(15px);
+  border-radius: 12px;
+  padding: 9px 20px;
+  /* width: 120px;
+  height: 45px; */
+  cursor: pointer;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 29px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+.button-div button:hover {
+  background: linear-gradient(
+    190deg,
+    #1b161d 7.59%,
+    #2f29387c 42.39%,
+    #0000007c 70.31%,
+    #0303039d 90.07%,
+    rgba(0, 0, 0, 0) 100.07%
+  );
+  color: #ffffff;
+  border: 1px solid #8c8692;
+}
+
+.banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 50px;
+  width: 65vw;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.12) 0%,
+    rgba(255, 255, 255, 0.06) 50%,
+    rgba(255, 255, 255, 0.12) 100%
+  );
+  backdrop-filter: blur(14px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 20px;
+  padding: 0 20px;
+}
+.box {
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* width: 7.9rem; */
+}
+.box h1 {
+  background: linear-gradient(
+    90deg,
+    #eaaeff 7.59%,
+    #d1adff 42.39%,
+    #a9d6ff 70.31%,
+    #ffffff 90.07%,
+    rgba(255, 255, 255, 0) 90.07%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-family: "Anton";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28.6121px;
+  /* line-height: 73px; */
+  text-align: center;
+  letter-spacing: 0.08em;
+  width: 100px;
+}
+.box p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+
+  letter-spacing: 0.01em;
+  width: 4rem;
+  color: #ffffff;
+}
+
+.featured {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+}

@@ -1,67 +1,54 @@
 import React from "react";
 import Navbar from "../../components/navbar/Navbar";
 import "./home.css";
+import bg from "../../assets/apple-bg.svg";
 
 const Home = () => {
-  return(
+  return (
     <>
-       <div className="hero">
-
-        <div className="Herotext">
-          <h1>
-             <span>Showcase your Web3 Projects to the world</span> 
+      <div className="hero">
+        <div className="herotext ">
+          <h1 className="heading">
+            <span>Showcase your Web3 Projects to the world</span>
           </h1>
           <h3>A platform to document your development journey</h3>
-          </div> 
-         
-          <div className="buttons">
-            
-          <button type="button">Upload project</button>
-          
-          <button type="button">Sign up today</button>
+        </div>
 
+        <div className="button-div">
+          <a href="">
+            {" "}
+            <button type="button">Upload project</button>
+          </a>
+
+          <a href="">
+            <button type="button"> Sign up today</button>
+          </a>
+        </div>
+
+        <div className="banner">
+          <div className="box">
+            <h1>1500+</h1>
+            <p>Curated projects</p>
           </div>
-
-          <div className="banners">
+          <div className=" box">
+            <h1>10k+</h1>
+            <p>Careers Upskilled</p>
           </div>
-
-          <div className="featured"><h2>Featured Projects</h2></div>
-          <div><h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4></div>
-
-          <div className="Top">
-               <div className="NFT"></div>
-               <div className="see-all"></div>
+          <div className="box">
+            <h1>$150k</h1>
+            <p>Raised in revenue</p>
           </div>
-          
-
-          </div>
-  
-          <div className="Cards"></div>
-
-          <button type="button">Upload your project today</button>
-
-          <div className="sub-hero">
-
-            <div className="sub-hero-text">
-             
-            <div className="sub-hero-heading"><h1>We are a decentralized platform</h1></div>
-
-            <div className="sub-hero-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</div>
-
-            <button type="button">Learn More</button>
-
-            </div>
-
-            <div className="sub-hero-img"></div>
-
-          </div>
-
-         
-
-          
-
+        </div>
+      </div>
+      <div className="featured">
+        <h1 className="heading ">Featured Projects</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <br />
+        <br />
+        <div className="slider"></div>
+      </div>
     </>
-  )
-}
+  );
+};
 
 export default Home;

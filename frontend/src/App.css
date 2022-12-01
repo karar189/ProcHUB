@@ -1,3 +1,15 @@
-.navb{
-  height: 140px;
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+.navb {
+  height: 15vh;
+}
+.routesSection {
+  height: 85vh;
+}
+
+body {
+  background-color: #1e1e1e;
+  overflow-x: hidden !important;
+  width: 100vw !important;
+  font-family: "Questrial", sans-serif;
+  scrollbar-color: #57427d;
 }
