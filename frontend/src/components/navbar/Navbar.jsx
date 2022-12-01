@@ -1,13 +1,16 @@
 import React from "react";
 import "./navbar.css";
 import { Routes, Route, Link, BrowserRouter as Router } from "react-router-dom";
+import logo1 from "../../assets/elipse.svg";
+import profile from "../../assets/profile.svg"
+
 const Navbar = () => {
   return (
     <>
       <nav role="navigation">
         <ul id="menu">
           <Link to="/" style={{ textDecoration: "none" }}>
-            <img src="" alt="logo" className=""/>
+            <img src={logo1} alt="logo" className="logo"/>
           </Link>
           <Link to="./projects" style={{ textDecoration: "none" }}>
             <p>Projects</p>
@@ -17,6 +20,9 @@ const Navbar = () => {
           </Link>
           <Link to="./blogs" style={{ textDecoration: "none" }}>
             <p>Blogs</p>
+          </Link>
+          <Link to="/" style={{ textDecoration: "none" }}>
+            <img src={profile} alt="logo" className="profile"/>
           </Link>
         </ul>
 
