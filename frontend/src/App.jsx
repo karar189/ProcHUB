@@ -14,7 +14,9 @@ function App() {
   return (
     <>
       <Router>
-        <div className="navb">{/* <Navbar /> */}</div>
+        <div className="navb">
+          <Navbar />
+        </div>
 
         <div className="routesSection">
           <Routes>
