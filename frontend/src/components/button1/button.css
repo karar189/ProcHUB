@@ -1,0 +1,23 @@
+.button1 {
+  right: 180px;
+  top: 27px;
+
+  background: #171717;
+  border-radius: 20px;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+
+  text-align: center;
+  letter-spacing: 0.05em;
+  border: #ffff;
+  background: linear-gradient(90deg, #e9d8ff 0%, #f4d6ff 52.6%, #d9edff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
