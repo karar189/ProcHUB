@@ -5,6 +5,7 @@ import "./App.css";
 import Home from "./pages/home/Home";
 import Blogs from "./pages/blogs/Blogs";
 import Ranks from "./pages/ranks/Ranks";
+import Project from "./pages/project/Project";
 import Navbar from "./components/navbar/Navbar";
 import Catalogue from "./pages/catalogue/catalogue";
 import Footer from "./components/footer/Footer";
@@ -22,7 +23,10 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/ranks" elemnet={<Ranks />} />
-            <Route path="/projects" element={<Catalogue />} />
+            <Route path="/project" elemnet={<Project />} />
+            <Route path="/catalogue" element={<Catalogue />} />
+          
+
 
             {/* <Route
             path="/product-catalouge/product-page"
