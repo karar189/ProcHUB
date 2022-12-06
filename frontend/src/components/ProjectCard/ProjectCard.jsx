@@ -5,12 +5,14 @@ import github from "../../assets/Github.svg";
 import twitter from "../../assets/twitter2.svg";
 import linkedn from "../../assets/linkedn.svg";
 
+import proc1 from "../../assets/img-proc.png";
+
 const ProjectCard = () => {
   return (
     <>
       <div className="box-card">
-        <div className="img">
-          <img src="" alt="background-img" srcset="" />
+        <div className="img-proc">
+          <img src={proc1} alt="background-img" srcset="" />
         </div>
         <div className="content">
           <h1>Project Name</h1>

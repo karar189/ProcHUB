@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* width: 400px; */
+  width: 400px;
   color: azure;
 
   background: rgba(255, 255, 255, 0.1);
@@ -12,6 +12,18 @@
 
   border-radius: 20px;
 }
+.box-card .img-proc {
+  /* height: 200px; */
+  width: 400px;
+  border-radius: 20px 20px 0 0;
+}
+
+.img-proc img {
+  width: 100%;
+  overflow: hidden;
+  object-fit: cover;
+}
+
 .content {
   display: flex;
   flex-direction: column;

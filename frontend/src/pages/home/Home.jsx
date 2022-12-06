@@ -2,6 +2,7 @@ import React from "react";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import "./home.css";
 import bg from "../../assets/apple-bg.svg";
+import illustration from "../../assets/Decentralised.svg";
 
 const Home = () => {
   return (
@@ -59,8 +60,32 @@ const Home = () => {
         <br />
         <div className="card-section">
           <ProjectCard />
-          {/* <ProjectCard />
-          <ProjectCard /> */}
+          <ProjectCard />
+          <ProjectCard />
+        </div>
+        <br />
+        <br />
+        <div className="upload-btn">
+          <a href="">Upload Your Project Today</a>
+        </div>
+      </div>
+      <div className="about-main">
+        <div className="about1">
+          <div className="about1-left">
+            <h1>We are a decentralized platform</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              malesuada, nunc vel tincidunt lacinia, nisl nisl aliquam nunc, nec
+              aliquam nisl nisl sit
+            </p>
+            <br />
+            <div className="button">
+              <a href="">Read More</a>
+            </div>
+          </div>
+          <div className="about1-right">
+            <img src={illustration} alt="" />
+          </div>
         </div>
       </div>
     </>
