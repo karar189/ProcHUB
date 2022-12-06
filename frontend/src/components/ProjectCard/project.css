@@ -1,0 +1,7 @@
+.box-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* width: 7.9rem; */
+}

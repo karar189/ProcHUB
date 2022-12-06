@@ -1,9 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 .navb {
   height: 20vh;
+  position: absolute;
+  top: 10px;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
 }
 .routesSection {
-  height: 85vh;
+  /* height: 85vh; */
 }
 
 body {
@@ -12,4 +17,5 @@ body {
   width: 100vw !important;
   font-family: "Questrial", sans-serif;
   scrollbar-color: #57427d;
+  position: relative;
 }

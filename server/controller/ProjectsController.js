@@ -73,7 +73,7 @@ export const patchProjects = async (req, res) => {
   res.json(updateProjects);
 };
 
-// @route: DELETE usera/Projects/id
+// @route: DELETE users/Projects/id
 export const deleteProjects = async (req, res) => {
   try {
     const deleteuserProject = await project.deleteOne({
