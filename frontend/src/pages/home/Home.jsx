@@ -45,7 +45,17 @@ const Home = () => {
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         <br />
         <br />
-        <div className="slider"></div>
+        <div className="slider">slider</div>
+        <br />
+        <br />
+        <div className="title">
+          <div className="left ">
+            <p>Top 3 of 109 NFT Projects</p>
+          </div>
+          <div className="right">
+            <p>View all</p>
+          </div>
+        </div>
       </div>
     </>
   );

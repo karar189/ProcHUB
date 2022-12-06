@@ -69,7 +69,7 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
-  width: 300px;
+  width: 400px;
 }
 .button-div button {
   background: #171717;
@@ -166,7 +166,15 @@
 .featured {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   margin-top: 70px;
+  height: 100vh;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 70vw;
 }
