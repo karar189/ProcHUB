@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../../components/navbar/Navbar";
+import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import "./home.css";
 import bg from "../../assets/apple-bg.svg";
 
@@ -55,6 +55,12 @@ const Home = () => {
           <div className="right">
             <p>View all</p>
           </div>
+        </div>
+        <br />
+        <div className="card-section">
+          <ProjectCard />
+          {/* <ProjectCard />
+          <ProjectCard /> */}
         </div>
       </div>
     </>
