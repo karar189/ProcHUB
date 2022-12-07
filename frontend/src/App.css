@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
 .navb {
   height: 20vh;
   position: absolute;
@@ -12,7 +14,7 @@
 }
 
 body {
-  background-color: #1e1e1e;
+  background-color: #000000;
   overflow-x: hidden !important;
   width: 100vw !important;
   font-family: "Questrial", sans-serif;

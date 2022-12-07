@@ -1,7 +1,8 @@
 import React from "react";
-import Navbar from "../../components/navbar/Navbar";
+import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import "./home.css";
 import bg from "../../assets/apple-bg.svg";
+import illustration from "../../assets/Decentralised.svg";
 
 const Home = () => {
   return (
@@ -45,7 +46,47 @@ const Home = () => {
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         <br />
         <br />
-        <div className="slider"></div>
+        <div className="slider">slider</div>
+        <br />
+        <br />
+        <div className="title">
+          <div className="left ">
+            <p>Top 3 of 109 NFT Projects</p>
+          </div>
+          <div className="right">
+            <p>View all</p>
+          </div>
+        </div>
+        <br />
+        <div className="card-section">
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+        </div>
+        <br />
+        <br />
+        <div className="upload-btn">
+          <a href="">Upload Your Project Today</a>
+        </div>
+      </div>
+      <div className="about-main about section 1">
+        <div className="about1">
+          <div className="about1-left">
+            <h1>We are a decentralized platform</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              malesuada, nunc vel tincidunt lacinia, nisl nisl aliquam nunc, nec
+              aliquam nisl nisl sit
+            </p>
+            <br />
+            <div className="button">
+              <a href="">Read More</a>
+            </div>
+          </div>
+          <div className="about1-right">
+            <img src={illustration} alt="" />
+          </div>
+        </div>
       </div>
     </>
   );

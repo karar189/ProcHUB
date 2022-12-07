@@ -1,5 +1,5 @@
 import Mongoose from "mongoose";
-import Project from "../models/projectModel.js";
+import project from "../models/projectModel.js";
 import { v4 as uuidv4 } from "uuid";
 import user from "../models/userModel.js";
 
@@ -7,9 +7,11 @@ import user from "../models/userModel.js";
 //@puropose : get all Projects from db for single user
 export const getProjects = async (req, res, next) => {
   try {
-    const Projectfetch = await Project.find({
-      username: req.user._id,
-    }).populate("username");
+    const Projectfetch = await project
+      .find({
+        username: req.user._id,
+      })
+      .populate("username");
     res.status(200).json(Projectfetch);
   } catch (error) {
     res.status(404);
@@ -34,7 +36,7 @@ export const postProjects = async (req, res, next) => {
     isValid: true,
   };
 
-  var newProjects = new Project(newpost);
+  var newProjects = new project(newpost);
   try {
     console.log(req.body);
     await newProjects.save();
@@ -65,7 +67,7 @@ export const patchProjects = async (req, res) => {
   if (!Mongoose.Types.ObjectId.isValid(id))
     res.status(404).send("No post with that is Found");
 
-  const updateProjects = await Project.findByIdAndUpdate(id, post, {
+  const updateProjects = await project.findByIdAndUpdate(id, post, {
     new: true,
   });
   res.json(updateProjects);
@@ -74,7 +76,7 @@ export const patchProjects = async (req, res) => {
 // @route: DELETE users/Projects/id
 export const deleteProjects = async (req, res) => {
   try {
-    const deleteuserProject = await Project.deleteOne({
+    const deleteuserProject = await project.deleteOne({
       _id: req.params.id,
     });
     res.status(200).json(deleteuserProject);
