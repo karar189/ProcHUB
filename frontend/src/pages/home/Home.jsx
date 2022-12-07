@@ -69,7 +69,7 @@ const Home = () => {
           <a href="">Upload Your Project Today</a>
         </div>
       </div>
-      <div className="about-mainadd: about section 1">
+      <div className="about-main about section 1">
         <div className="about1">
           <div className="about1-left">
             <h1>We are a decentralized platform</h1>
