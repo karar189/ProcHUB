@@ -40,6 +40,8 @@ const Footer = () => {
           </div>
         </div>
 
+
+
         <div className="right-side">
           <div className="company" >  
             <a className="headings">Company</a>
@@ -74,5 +76,6 @@ const Footer = () => {
     </>
   );
 };
+
 
 export default Footer;

@@ -52,14 +52,19 @@ const ProjectCard = () => {
             {/* <a href="">
               {" "}
               <img src={linkedn} alt={linkedn} className="" />{" "}
-            </a> */}
+            </a>  */}
           </div>
+
           <div className="footer-card-right">
             <a type="button">View</a>
           </div>
+          
+          
+           
+          
         </div>
       </div>
-
+     
       <div />
     </>
   );

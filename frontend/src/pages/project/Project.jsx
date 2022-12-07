@@ -1,10 +1,10 @@
 import React from "react";
 import "./project.css";
-import projectbg from '../../assets/projectbg.svg';
-import projectimg from '../../assets/projectimg.svg';
+import projectbg from "../../assets/projectbg.svg";
+import projectimg from "../../assets/projectimg.svg";
 
 const Project = () => {
-  return(
+  return (
     <>
       <section className="hero">
         <div className="project-intro">
@@ -59,7 +59,50 @@ const Project = () => {
             aptent taciti sociosqu ad litora torquent per conubia nostra, per
             inceptos himenaeos.
           </h3>
+
           <img src={projectimg} alt={img} className="" />
+        </div>
+
+        <div className="milestones">
+          <div className="header">Milestones</div>
+
+          <div className="contents">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+            vulputate libero et velit interdum, ac aliquet odio mattis. Class
+            aptent taciti sociosqu ad litora torquent per conubia nostra, per
+            inceptos himenaeos.
+          </div>
+
+          <div className="chart"></div>
+
+          <button className="puku"></button>
+        </div>
+
+        <div className="showcase">
+
+          <div className="header">Showcase</div>
+
+          <div className="contents">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+            vulputate libero et velit interdum, ac aliquet odio mattis. Class
+            aptent taciti sociosqu ad litora torquent per conubia nostra, per
+            inceptos himenaeos.
+          </div>
+
+          <div className="chart"></div>
+
+          <button className="puku"></button>
+        </div>
+
+      </section>
+
+      <section className="cards">
+        \
+        <div className="feature">
+          <div> <a className="" >We were Featured on</a>
+          <a>See all</a> </div>
+         
+         
         </div>
       </section>
     </>
