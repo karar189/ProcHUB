@@ -41,12 +41,13 @@ const Home = () => {
           </div>
         </div>
       </div>
+      
       <div className="featured">
         <h1 className="heading ">Featured Projects</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         <br />
         <br />
-        <div className="slider">slider</div>
+        <div className="dw">slider</div>
         <br />
         <br />
         <div className="title">

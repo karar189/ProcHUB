@@ -83,7 +83,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
+ 
 }
 
 .tag {
@@ -162,7 +162,6 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
 
   font-family: "Montserrat";
   font-style: normal;
@@ -171,7 +170,6 @@
   line-height: 48px;
   cursor: pointer;
   padding: 0 10px;
-  /* text-decoration: underline 2px solid white; */
   text-decoration: underline;
   text-underline-position: under;
   text-decoration-color: #ffffff;

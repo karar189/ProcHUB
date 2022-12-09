@@ -4,7 +4,6 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,7 +37,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
+  /* text-fill-color: transparent; */
 }
 .herotext h3 {
   font-family: "Anton";
@@ -60,7 +59,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
+  /* text-fill-color: transparent; */
 }
 
 .button-div {
@@ -142,7 +141,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
+  /* text-fill-color: transparent; */
   font-family: "Anton";
   font-style: normal;
   font-weight: 400;
@@ -267,7 +266,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
+  /* text-fill-color: transparent; */
   color: #ffffff;
 }
 .about1-left p {

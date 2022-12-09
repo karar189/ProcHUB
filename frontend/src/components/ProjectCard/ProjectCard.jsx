@@ -59,9 +59,7 @@ const ProjectCard = () => {
             <a type="button">View</a>
           </div>
           
-          
-           
-          
+
         </div>
       </div>
      

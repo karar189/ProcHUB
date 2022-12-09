@@ -1,0 +1,234 @@
+.heroic {
+  background-image: url(../../assets/projectbg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+  background-color: #000000;
+  /* overflow-x: hidden !important; */
+  width: 100vw !important;
+  font-family: "Questrial", sans-serif;
+  scrollbar-color: #57427d;
+  padding: 10px;
+}
+
+.project-intro {
+  display: flex;
+  flex-direction: row;
+  width: 1000px;
+  justify-content: space-between;
+  margin-top: 555px;
+}
+
+.pro-logo {
+  height: 150px;
+  width: 150px;
+  margin-left: -95px;
+}
+
+.project-name {
+  color: aliceblue;
+  font-family: "Montserrat";
+  margin-left: -180px;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-name a {
+  font-size: 45px;
+  margin-top: 60px;
+  color: #f7e1ff;
+}
+
+.social-links2 {
+  width: 260px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: -75px;
+  margin-top: 60px;
+}
+
+.socials {
+  height: 50px;
+  width: 50px;
+}
+
+.project-interactions {
+  display: flex;
+  flex-direction: row;
+  width: 1300px;
+  justify-content: space-between;
+  padding-top: 160px;
+}
+
+.buttons {
+  display: flex;
+  width: 575px;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 200px;
+  margin-top: 10px;
+  padding-right: 200px;
+}
+
+.boxes {
+  padding: 2.5px 30px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(14px);
+  height: 23px;
+  border-radius: 15px;
+  display: flex;
+  border: #eaaeff 1.8px solid;
+  justify-content: center;
+  background: linear-gradient(
+    90deg,
+    #eaaeff 7.59%,
+    #d1adff 42.39%,
+    #a9d6ff 70.31%,
+    #ffffff 90.07%,
+    rgba(255, 255, 255, 0) 90.07%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.interactions {
+  display: flex;
+  flex-direction: row;
+}
+
+.icons {
+  height: 25px;
+  width: 25px;
+  padding: 4px 6px;
+}
+
+.boxes2 {
+  border-radius: 15px 0 0 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(14px);
+  padding-right: 5px;
+}
+
+.boxes2 span {
+  color: white;
+  font-size: 15px;
+}
+
+.boxes3 {
+  border-radius: 0 15px 15px 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(14px);
+}
+
+.project-details {
+  color: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-texts {
+  height: 400px;
+  width: 800px;
+  padding: 130px;
+  font-family: "Montserrat";
+}
+
+.project-texts h1 {
+  color: #f7e1ff;
+  font-size: 35px;
+  font-weight: 700;
+  margin-top: -10px;
+}
+
+.project-texts h3 {
+  color: white;
+  font-size: 16px;
+  line-height: 40px;
+}
+
+.project-img {
+  margin-right: 95px;
+}
+
+.pimage {
+  height: 350px;
+  width: 350px;
+  padding: 140px;
+}
+
+.milestones {
+}
+
+.mile-head {
+  display: flex;
+  justify-content: center;
+  color: #f7e1ff;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 35px;
+  padding-bottom: 30px;
+}
+
+.mile-contents{
+  display: flex;
+  justify-content: center;
+  color:white;
+  font-family: "Montserrat";
+  font-weight: 100;
+  font-size: 18px;
+  padding-bottom: 80px;
+ 
+}
+
+.chart{
+display: flex;
+justify-content: center;
+padding-bottom: 80px;
+}
+
+
+.graphs{
+  width: 1200px;
+  border-radius: 10px;
+
+}
+
+.show-header{
+  display: flex;
+  justify-content: center;
+  color: #f7e1ff;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 35px;
+  padding-bottom: 40px;
+}
+
+.show-contents{
+  display: flex;
+  justify-content: center;
+  color:white;
+  font-family: "Montserrat";
+  font-weight: 100;
+  font-size: 18px;
+  padding-bottom: 300px;
+
+}
+
+.card-section {
+  display: flex;
+  justify-content: space-between;
+  width: 90vw;
+  padding: 90px;
+}
+
+
