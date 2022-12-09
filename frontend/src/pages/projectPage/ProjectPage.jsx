@@ -1,18 +1,18 @@
 import React from "react";
-import "./project.css";
 import projectbg from "../../assets/projectbg.svg";
 import projectimg from "../../assets/projectimg.svg";
+import "./projectPage.css";
 
-const Project = () => {
+const ProjectPage = () => {
   return (
     <>
-      {/* <section className="hero">
+      <section className="hero">
         <div className="project-intro">
           <div className="logo"></div>
 
           <div className="project-name">Project Name</div>
 
-          <div className="social-links">
+          {/* <div className="social-links">
             <a href="">
               {" "}
               <img src={twitter} alt={twitter} className="" />{" "}
@@ -29,7 +29,7 @@ const Project = () => {
               {" "}
               <img src={compass} alt={compass} className="" />{" "}
             </a>
-          </div>
+          </div> */}
         </div>
 
         <div className="project-interactions">
@@ -60,7 +60,7 @@ const Project = () => {
             inceptos himenaeos.
           </h3>
 
-          <img src={projectimg} alt={img} className="" />
+          {/* <img src={projectimg} alt={img} className="" /> */}
         </div>
 
         <div className="milestones">
@@ -79,7 +79,6 @@ const Project = () => {
         </div>
 
         <div className="showcase">
-
           <div className="header">Showcase</div>
 
           <div className="contents">
@@ -93,21 +92,20 @@ const Project = () => {
 
           <button className="puku"></button>
         </div>
-
       </section>
 
       <section className="cards">
         \
         <div className="feature">
-          <div> <a className="" >We were Featured on</a>
-          <a>See all</a> </div>
-         
-         
+          <div>
+            {" "}
+            <a className="">We were Featured on</a>
+            <a>See all</a>{" "}
+          </div>
         </div>
-      </section> */}
-      test
+      </section>
     </>
   );
 };
 
-export default Project;
+export default ProjectPage;
