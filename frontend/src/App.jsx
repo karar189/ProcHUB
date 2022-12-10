@@ -25,7 +25,7 @@ function App() {
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/ranks" elemnet={<Ranks />} />
             {/* <Route path="/project" elemnet={<Project />} /> */}
-            <Route path="/projects" element={<Catalogue />} />
+            {/* <Route path="/projects" element={<Catalogue />} /> */}
 
             <Route path="/projects/project-page" element={<ProjectPage />} />
           </Routes>

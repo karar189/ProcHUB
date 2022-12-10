@@ -164,9 +164,6 @@
   padding: 140px;
 }
 
-.milestones {
-}
-
 .mile-head {
   display: flex;
   justify-content: center;
@@ -178,31 +175,28 @@
   padding-bottom: 30px;
 }
 
-.mile-contents{
+.mile-contents {
   display: flex;
   justify-content: center;
-  color:white;
+  color: white;
   font-family: "Montserrat";
   font-weight: 100;
   font-size: 18px;
   padding-bottom: 80px;
- 
 }
 
-.chart{
-display: flex;
-justify-content: center;
-padding-bottom: 80px;
+.chart {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 80px;
 }
 
-
-.graphs{
+.graphs {
   width: 1200px;
   border-radius: 10px;
-
 }
 
-.show-header{
+.show-header {
   display: flex;
   justify-content: center;
   color: #f7e1ff;
@@ -213,15 +207,14 @@ padding-bottom: 80px;
   padding-bottom: 40px;
 }
 
-.show-contents{
+.show-contents {
   display: flex;
   justify-content: center;
-  color:white;
+  color: white;
   font-family: "Montserrat";
   font-weight: 100;
   font-size: 18px;
-  padding-bottom: 300px;
-
+  padding-bottom: 60px;
 }
 
 .card-section {
@@ -231,4 +224,141 @@ padding-bottom: 80px;
   padding: 90px;
 }
 
+.feature {
+  display: flex;
+  flex-direction: row;
+  width: 1500px;
+  justify-content: space-around;
+  color: #f7e1ff;
+}
 
+.feat {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  margin-left: -380px;
+}
+
+.feat2 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  margin-right: -380px;
+}
+
+.team-section h1 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  color: #eaaeff;
+  font-size: 25px;
+  padding-left: 100px;
+}
+
+.team-section p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  color: whitesmoke;
+  width: 1200px;
+  padding-left: 100px;
+  
+}
+
+.team-images {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 60px;
+  margin-left: -145px;
+}
+
+.ind-image {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(14px);
+  border-radius: 50%;
+  width: 125px;
+  height: 125px;
+  border: #eaaeff 1.8px solid;
+}
+
+.contact h1 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  color: #eaaeff;
+  font-size: 25px;
+  padding-left: 100px;
+  padding-top: 120px;
+}
+
+.contact-us{
+  display: flex;
+  flex-direction: row;
+}
+
+.contact-us p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  color: whitesmoke;
+  width: 800px;
+  line-height: 40px;
+  padding-right: 60px;
+}
+
+.contact-buttons{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.contact-btn {
+  padding: 10px 10px 30px;
+  width: 280px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(14px);
+  height: 50px;
+  border-radius: 15px;
+  display: flex;
+  border: #eaaeff 1.6px solid;
+  justify-content: space-evenly;
+  color: whitesmoke;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+}
+
+.puku{
+  height: 25px;
+  width: 25px;
+}
+
+.hachu{
+  width: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.hachu span{
+  padding-right: 60px;
+}
+
+.line{
+
+margin-top: 100px;
+margin-bottom: 100px;
+
+width: 90vw;
+height: 0px;
+color: whitesmoke;
+
+}
+
+.video{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 100px;
+}
