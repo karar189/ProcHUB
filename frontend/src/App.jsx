@@ -8,6 +8,7 @@ import Ranks from "./pages/ranks/Ranks";
 import Navbar from "./components/navbar/Navbar";
 import Catalogue from "./pages/catalogue/catalogue";
 import ProjectPage from "./pages/projectPage/ProjectPage";
+import Register from "./pages/register/Register";
 import Footer from "./components/footer/Footer";
 
 function App() {
@@ -24,7 +25,7 @@ function App() {
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/ranks" elemnet={<Ranks />} />
             <Route path="/projects" element={<Catalogue />} />
-
+            <Route path="/register" element={<Register />} />
             <Route path="/projects/project-page" element={<ProjectPage />} />
           </Routes>
         </div>

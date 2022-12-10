@@ -8,7 +8,7 @@ import {
   UPDATEDETAILS,
 } from "../actionTypes/projectConstants";
 
-const url = "https://mydiary-backend-host.herokuapp.com/users/project";
+const url = "http://localhost:5000/";
 
 export const getPosts = () => async (dispatch, getState) => {
   try {

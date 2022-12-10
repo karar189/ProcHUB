@@ -20,7 +20,7 @@ export const userRegister = (username, email, password) => async (dispatch) => {
     const config = {
       "Content-Type": "application/json",
     };
-    const baseUrl = "https://mydiary-backend-host.herokuapp.com";
+    const baseUrl = "http://localhost:5000/";
     const { data } = await axios.post(
       baseUrl + "/users/signup",
       { email, password, username },

@@ -3,8 +3,48 @@ import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import "./home.css";
 import bg from "../../assets/apple-bg.svg";
 import illustration from "../../assets/Decentralised.svg";
+import { makeStyles } from "@mui/styles";
+// import makeStyles from "@mui/styles/makeStyles";
+
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import Box from "@mui/material/Box";
 
 const Home = () => {
+  const useStyles = makeStyles({
+    tabs: {
+      "& .MuiTab.root": {
+        color: "white",
+      },
+      "& .MuiTabs-indicator": {
+        backgroundColor: "transparent",
+        // height: 3,
+        // border: "1px solid red",
+      },
+      "& .MuiTab-root.Mui-selected": {
+        color: "white",
+      },
+      "& button": {
+        color: "white",
+        border: "1px solid white",
+        borderRadius: "25px",
+        margin: "7px",
+      },
+
+      "& .button:active": {
+        outline: "none",
+        backgroundColor: "blue",
+      },
+    },
+  });
+
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+  const classes = useStyles();
+
   return (
     <>
       <div className="hero">
@@ -46,7 +86,48 @@ const Home = () => {
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         <br />
         <br />
-        <div className="slider">slider</div>
+        <div className="slider">
+          {" "}
+          <Box
+            sx={{
+              maxWidth: { xs: 320, sm: 980 },
+              bgcolor: "transparent",
+              color: "white",
+            }}
+          >
+            <Tabs
+              value={value}
+              onChange={handleChange}
+              variant="scrollable"
+              scrollButtons
+              allowScrollButtonsMobile
+              aria-label="scrollable force tabs example"
+              className={classes.tabs}
+            >
+              <Tab sx={{ color: "secondary" }} label="Item One" />
+              <Tab label="Item Two" className={classes.tab} />
+              <Tab label="Item Three" />
+              <Tab label="Item Four" />
+              <Tab label="Item Five" />
+              <Tab label="Item Six" />
+              <Tab label="Item Seven" />
+              <Tab label="Item One" />
+              <Tab label="Item Two" />
+              <Tab label="Item Three" />
+              <Tab label="Item Four" />
+              <Tab label="Item Five" />
+              <Tab label="Item Six" />
+              <Tab label="Item Seven" />
+              <Tab label="Item One" />
+              <Tab label="Item Two" />
+              <Tab label="Item Three" />
+              <Tab label="Item Four" />
+              <Tab label="Item Five" />
+              <Tab label="Item Six" />
+              <Tab label="Item Seven" />
+            </Tabs>
+          </Box>
+        </div>
         <br />
         <br />
         <div className="title">
