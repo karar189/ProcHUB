@@ -1,5 +1,6 @@
 import React from "react";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
+import { Routes, Route, Link, BrowserRouter as Router } from "react-router-dom";
 import "./home.css";
 import bg from "../../assets/apple-bg.svg";
 import illustration from "../../assets/Decentralised.svg";
@@ -61,9 +62,9 @@ const Home = () => {
             <button type="button">Upload project</button>
           </a>
 
-          <a href="">
+          <Link to="/register">
             <button type="button"> Sign up today</button>
-          </a>
+          </Link>
         </div>
 
         <div className="banner">

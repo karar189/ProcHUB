@@ -9,6 +9,7 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import "./register.css";
+import Alert from "@mui/material/Alert";
 
 // Redux
 import { userRegister } from "../../redux/actions/userAction";
@@ -65,6 +66,9 @@ const Register = ({ history }) => {
     } else {
       setError("Please fill all the fields");
     }
+    console.log(username);
+    console.log(email);
+    console.log(password);
   };
   const useStyles = makeStyles({
     "& .MuiTextField-root": {
@@ -83,9 +87,6 @@ const Register = ({ history }) => {
             id="Name"
             label="Your Name"
             name="name"
-            inputProps={{
-              style: { color: "white" },
-            }}
             autoFocus
             type="text"
             placeholder="Full Name"

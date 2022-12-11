@@ -22,11 +22,11 @@ export const userRegister = (username, email, password) => async (dispatch) => {
     };
     const baseUrl = "http://localhost:5000/";
     const { data } = await axios.post(
-      baseUrl + "/users/signup",
+      baseUrl + "/register",
       { email, password, username },
       config
     );
-    // console.log(data);
+    console.log(data);
 
     dispatch({
       type: USER_REGISTER_SUCCESS,
@@ -54,11 +54,12 @@ export const userLogin = (email, password) => async (dispatch, getState) => {
     };
 
     const { data } = await axios.post(
-      baseUrl + "/users/login",
+      // baseUrl + "/users/login",
+      baseUrl,
       { email, password },
       config
     );
-    // console.log(data);
+    console.log(data);
 
     dispatch({
       type: USER_LOGIN_SUCCESS,
