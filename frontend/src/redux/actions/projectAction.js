@@ -1,26 +1,26 @@
-import axios from "axios";
+import axios from 'axios';
 
 import {
   FETCH_ALL,
   CREATE,
   UPDATE,
   DELETE,
-  UPDATEDETAILS,
-} from "../actionTypes/projectConstants";
+  UPDATEDETAILS
+} from '../actionTypes/projectConstants';
 
-const url = "http://localhost:5000/";
+const url = 'http://localhost:5000/';
 
 export const getPosts = () => async (dispatch, getState) => {
   try {
     const {
-      userLogin: { userInfo },
+      userLogin: { userInfo }
     } = getState();
 
     const config = {
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
       headers: {
-        Authorization: `Bearer ${userInfo.token}`,
-      },
+        Authorization: `Bearer ${userInfo.token}`
+      }
     };
     const { data } = await axios.get(url, config);
     // console.log("ACTION:", data);
@@ -35,14 +35,14 @@ export const getPosts = () => async (dispatch, getState) => {
 export const createPost = (title, body) => async (dispatch, getState) => {
   try {
     const {
-      userLogin: { userInfo },
+      userLogin: { userInfo }
     } = getState();
 
     const config = {
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
       headers: {
-        Authorization: `Bearer ${userInfo.token}`,
-      },
+        Authorization: `Bearer ${userInfo.token}`
+      }
     };
     const { data } = await axios.post(url, { title, body }, config);
     // console.log(data);
@@ -53,17 +53,17 @@ export const createPost = (title, body) => async (dispatch, getState) => {
   }
 };
 
-export const getUpdates = (id) => async (dispatch, getState) => {
+export const getUpdates = id => async (dispatch, getState) => {
   try {
     const {
-      userLogin: { userInfo },
+      userLogin: { userInfo }
     } = getState();
 
     const config = {
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
       headers: {
-        Authorization: `Bearer ${userInfo.token}`,
-      },
+        Authorization: `Bearer ${userInfo.token}`
+      }
     };
     const { data } = await axios.get(`${url}/${id}`, config);
     // console.log("ACTION:", data);
@@ -78,14 +78,14 @@ export const getUpdates = (id) => async (dispatch, getState) => {
 export const updatePost = (id, title, body) => async (dispatch, getState) => {
   try {
     const {
-      userLogin: { userInfo },
+      userLogin: { userInfo }
     } = getState();
 
     const config = {
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
       headers: {
-        Authorization: `Bearer ${userInfo.token}`,
-      },
+        Authorization: `Bearer ${userInfo.token}`
+      }
     };
     // console.log(userInfo);
 
@@ -97,17 +97,17 @@ export const updatePost = (id, title, body) => async (dispatch, getState) => {
   }
 };
 
-export const deletePost = (id) => async (dispatch, getState) => {
+export const deletePost = id => async (dispatch, getState) => {
   try {
     const {
-      userLogin: { userInfo },
+      userLogin: { userInfo }
     } = getState();
 
     const config = {
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
       headers: {
-        Authorization: `Bearer ${userInfo.token}`,
-      },
+        Authorization: `Bearer ${userInfo.token}`
+      }
     };
     await axios.delete(`${url}/${id}`, config);
     const action = { type: DELETE, payload: id };

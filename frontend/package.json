@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "format": "prettier --write src/**/*.{js,jsx,ts,tsx}",
+    "check-format": "prettier --check  */**/*.{js,jsx,ts,tsx}"
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
@@ -24,6 +26,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^2.2.0",
-    "vite": "^3.2.3"
+    "vite": "^3.2.3",
+    "prettier": "^2.5.1"
   }
 }

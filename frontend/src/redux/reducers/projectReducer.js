@@ -3,12 +3,12 @@ import {
   CREATE,
   UPDATE,
   DELETE,
-  UPDATEDETAILS,
-} from "../actionTypes/projectConstants";
+  UPDATEDETAILS
+} from '../actionTypes/projectConstants';
 
 const initialstate = {
   project: [],
-  data: {},
+  data: {}
 };
 
 const Project = (state = initialstate, action) => {
@@ -24,12 +24,12 @@ const Project = (state = initialstate, action) => {
 
     case UPDATE:
       return {
-        data: action.payload,
+        data: action.payload
       };
 
     case DELETE:
       return {
-        data: action.payload,
+        data: action.payload
       };
 
     default:

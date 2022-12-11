@@ -1,42 +1,42 @@
-import React from "react";
-import ProjectCard from "../../components/ProjectCard/ProjectCard";
-import { Routes, Route, Link, BrowserRouter as Router } from "react-router-dom";
-import "./home.css";
-import bg from "../../assets/apple-bg.svg";
-import illustration from "../../assets/Decentralised.svg";
-import { makeStyles } from "@mui/styles";
+import React from 'react';
+import ProjectCard from '../../components/ProjectCard/ProjectCard';
+import { Routes, Route, Link, BrowserRouter as Router } from 'react-router-dom';
+import './home.css';
+import bg from '../../assets/apple-bg.svg';
+import illustration from '../../assets/Decentralised.svg';
+import { makeStyles } from '@mui/styles';
 // import makeStyles from "@mui/styles/makeStyles";
 
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
-import Box from "@mui/material/Box";
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import Box from '@mui/material/Box';
 
 const Home = () => {
   const useStyles = makeStyles({
     tabs: {
-      "& .MuiTab.root": {
-        color: "white",
+      '& .MuiTab.root': {
+        color: 'white'
       },
-      "& .MuiTabs-indicator": {
-        backgroundColor: "transparent",
+      '& .MuiTabs-indicator': {
+        backgroundColor: 'transparent'
         // height: 3,
         // border: "1px solid red",
       },
-      "& .MuiTab-root.Mui-selected": {
-        color: "white",
+      '& .MuiTab-root.Mui-selected': {
+        color: 'white'
       },
-      "& button": {
-        color: "white",
-        border: "1px solid white",
-        borderRadius: "25px",
-        margin: "7px",
+      '& button': {
+        color: 'white',
+        border: '1px solid white',
+        borderRadius: '25px',
+        margin: '7px'
       },
 
-      "& .button:active": {
-        outline: "none",
-        backgroundColor: "blue",
-      },
-    },
+      '& .button:active': {
+        outline: 'none',
+        backgroundColor: 'blue'
+      }
+    }
   });
 
   const [value, setValue] = React.useState(0);
@@ -58,7 +58,7 @@ const Home = () => {
 
         <div className="button-div">
           <a href="">
-            {" "}
+            {' '}
             <button type="button">Upload project</button>
           </a>
 
@@ -88,12 +88,12 @@ const Home = () => {
         <br />
         <br />
         <div className="slider">
-          {" "}
+          {' '}
           <Box
             sx={{
               maxWidth: { xs: 320, sm: 980 },
-              bgcolor: "transparent",
-              color: "white",
+              bgcolor: 'transparent',
+              color: 'white'
             }}
           >
             <Tabs
@@ -105,7 +105,7 @@ const Home = () => {
               aria-label="scrollable force tabs example"
               className={classes.tabs}
             >
-              <Tab sx={{ color: "secondary" }} label="Item One" />
+              <Tab sx={{ color: 'secondary' }} label="Item One" />
               <Tab label="Item Two" className={classes.tab} />
               <Tab label="Item Three" />
               <Tab label="Item Four" />
@@ -156,9 +156,8 @@ const Home = () => {
           <div className="about1-left">
             <h1>We are a decentralized platform</h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              malesuada, nunc vel tincidunt lacinia, nisl nisl aliquam nunc, nec
-              aliquam nisl nisl sit
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada, nunc vel
+              tincidunt lacinia, nisl nisl aliquam nunc, nec aliquam nisl nisl sit
             </p>
             <br />
             <div className="button">

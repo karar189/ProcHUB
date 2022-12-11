@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 const catalogue = () => {
-  return (
-    <div>catalogue</div>
-  )
-}
+  return <div>catalogue</div>;
+};
 
-export default catalogue
+export default catalogue;

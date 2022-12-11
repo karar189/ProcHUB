@@ -1,32 +1,34 @@
-import React, { useState, useEffect } from "react";
-import { makeStyles } from "@mui/styles";
-import "./register.css";
-import Alert from "@mui/material/Alert";
-import { useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import { makeStyles } from '@mui/styles';
+import './register.css';
+import Alert from '@mui/material/Alert';
+import { useNavigate } from 'react-router-dom';
 
 // Redux
-import { userRegister } from "../../redux/actions/userAction";
-import { useDispatch, useSelector } from "react-redux";
+import { userRegister } from '../../redux/actions/userAction';
+import { useDispatch, useSelector } from 'react-redux';
 
 const Register = () => {
-  const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
+  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
 
   const navigate = useNavigate();
 
   //redux
   const dispatch = useDispatch();
-  const { userInfo } = useSelector((state) => state.userLogin);
-  const { serverError, userInfo: serverData } = useSelector((state) => state.userRegister);
+  const { userInfo } = useSelector(state => state.userLogin);
+  const { serverError, userInfo: serverData } = useSelector(state => state.userRegister);
   //Redirect to Homepage if loggedin
-  useEffect((history) => {
+  useEffect(
+    history => {
       if (userInfo || serverData) {
-        navigate("/");
+        navigate('/');
       }
     },
-    [history, userInfo, serverData]);
+    [history, userInfo, serverData]
+  );
 
   //serverside validation
   useEffect(() => {
@@ -35,7 +37,7 @@ const Register = () => {
     }
   }, [serverError]);
 
-  const submitHandler = (event) => {
+  const submitHandler = event => {
     event.preventDefault();
     // if (username && email && password) {
     //   if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email)){
@@ -56,21 +58,21 @@ const Register = () => {
     if (username && email && password) {
       dispatch(userRegister(username, email, password));
     } else {
-      setError("Please fill all the fields");
+      setError('Please fill all the fields');
     }
   };
   const useStyles = makeStyles({
-    "& .MuiTextField-root": {
-      color: "white",
-      border: "1px solid white",
-      margin: 20,
-    },
+    '& .MuiTextField-root': {
+      color: 'white',
+      border: '1px solid white',
+      margin: 20
+    }
   });
   const classes = useStyles();
   return (
     <>
       <div className="formbody">
-        {error ? <Alert severity="error">{error}</Alert> : ""}
+        {error ? <Alert severity="error">{error}</Alert> : ''}
         <div className="form">
           <input
             id="Name"
@@ -80,7 +82,7 @@ const Register = () => {
             type="text"
             placeholder="Full Name"
             value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            onChange={e => setUsername(e.target.value)}
           />
           <input
             id="email"
@@ -89,7 +91,7 @@ const Register = () => {
             autoComplete="email"
             placeholder="Email"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={e => setEmail(e.target.value)}
           />
           <input
             name="password"
@@ -99,7 +101,7 @@ const Register = () => {
             autoComplete="current-password"
             placeholder="Password"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={e => setPassword(e.target.value)}
           />
           <button type="submit" onClick={submitHandler}>
             Register

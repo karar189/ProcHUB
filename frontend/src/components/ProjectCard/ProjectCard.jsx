@@ -1,11 +1,11 @@
-import React from "react";
-import "./project.css";
-import facebook from "../../assets/facebook2.svg";
-import github from "../../assets/Github.svg";
-import twitter from "../../assets/twitter2.svg";
-import linkedn from "../../assets/linkedn.svg";
+import React from 'react';
+import './project.css';
+import facebook from '../../assets/facebook2.svg';
+import github from '../../assets/Github.svg';
+import twitter from '../../assets/twitter2.svg';
+import linkedn from '../../assets/linkedn.svg';
 
-import proc1 from "../../assets/img-proc.png";
+import proc1 from '../../assets/img-proc.png';
 
 const ProjectCard = () => {
   return (
@@ -38,16 +38,16 @@ const ProjectCard = () => {
         <div className="footer-card">
           <div className="footer-card-left">
             <a href="">
-              {" "}
-              <img src={facebook} alt={facebook} className="" />{" "}
+              {' '}
+              <img src={facebook} alt={facebook} className="" />{' '}
             </a>
             <a href="">
-              {" "}
-              <img src={github} alt={github} className="" />{" "}
+              {' '}
+              <img src={github} alt={github} className="" />{' '}
             </a>
             <a href="">
-              {" "}
-              <img src={twitter} alt={twitter} className="" />{" "}
+              {' '}
+              <img src={twitter} alt={twitter} className="" />{' '}
             </a>
             {/* <a href="">
               {" "}
