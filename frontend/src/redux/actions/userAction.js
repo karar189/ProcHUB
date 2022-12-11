@@ -20,14 +20,12 @@ export const userRegister = (username, email, password) => async (dispatch) => {
     const config = {
       "Content-Type": "application/json",
     };
-    const baseUrl = "http://localhost:5000/";
+    const baseUrl = "http://localhost:5000";
     const { data } = await axios.post(
       baseUrl + "/users/signup",
       { email, password, username },
       config
     );
-    console.log(data);
-
     dispatch({
       type: USER_REGISTER_SUCCESS,
       payload: data,

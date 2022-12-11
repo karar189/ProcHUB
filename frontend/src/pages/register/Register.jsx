@@ -1,74 +1,63 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import { makeStyles } from "@mui/styles";
-import Button from "@mui/material/Button";
-import TextField from "@mui/material/TextField";
-import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
 import "./register.css";
 import Alert from "@mui/material/Alert";
+import { useNavigate } from "react-router-dom";
 
 // Redux
 import { userRegister } from "../../redux/actions/userAction";
 import { useDispatch, useSelector } from "react-redux";
 
-const Register = ({ history }) => {
+const Register = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
+  const navigate = useNavigate();
+
   //redux
   const dispatch = useDispatch();
   const { userInfo } = useSelector((state) => state.userLogin);
-  const { serverError } = useSelector((state) => state.userRegister);
+  const { serverError, userInfo: serverData } = useSelector((state) => state.userRegister);
   //Redirect to Homepage if loggedin
-  useEffect(
-    (history) => {
-      if (userInfo) {
-        history.push("/");
+  useEffect((history) => {
+      if (userInfo || serverData) {
+        navigate("/");
       }
     },
-    [history, userInfo]
-  );
+    [history, userInfo, serverData]);
 
   //serverside validation
   useEffect(() => {
     if (serverError !== null) {
-      setError("User with this email address already exist!");
+      setError(serverError.mesaage);
     }
-    if (serverError === true) {
-      history.push("/");
-    }
-  }, [serverError, history]);
+  }, [serverError]);
 
   const submitHandler = (event) => {
     event.preventDefault();
+    // if (username && email && password) {
+    //   if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email)){
+    //     if (password.match(/^[A-Za-z]\w{7,14}$/)) {
+    //       dispatch(userRegister(username, email, password));
+    //     } else {
+    //       setError(
+    //         "password must be between 7 to 16 characters which contain only characters, numeric digits, underscore and first character must be a letter"
+    //       );
+    //     }
+    //   } else {
+    //     setError("This is not the right email");
+    //   }
+    // } else {
+    //   setError("Please fill all the fields");
+    // }
+    // username name and password validation
     if (username && email && password) {
-      if (
-        /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
-          email
-        )
-      ) {
-        if (password.match(/^[A-Za-z]\w{7,14}$/)) {
-          dispatch(userRegister(username, email, password));
-        } else {
-          setError(
-            "password must be between 7 to 16 characters which contain only characters, numeric digits, underscore and first character must be a letter"
-          );
-        }
-      } else {
-        setError("This is not the right email");
-      }
+      dispatch(userRegister(username, email, password));
     } else {
       setError("Please fill all the fields");
     }
-    console.log(username);
-    console.log(email);
-    console.log(password);
   };
   const useStyles = makeStyles({
     "& .MuiTextField-root": {
