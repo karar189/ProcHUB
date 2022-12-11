@@ -93,85 +93,13 @@ const Navbar = () => {
               <img src={search} alt="searchicon" id="searchId" />
               <input type="search" placeholder="Search..." id="searchInput" />
             </div>
-
-            <div className="upload">
-              <a href="">Upload</a>
-            </div>
             <Link to="/" style={{ textDecoration: "none" }}>
+              <div className="upload">Upload</div>
+            </Link>
+
+            <Link to="/login" style={{ textDecoration: "none" }}>
               {/* <img src={profile} alt="logo" className="profile" /> */}
-              <div>
-                <Button variant="outlined" onClick={handleClickOpen}>
-                  SignIn
-                </Button>
-                <Dialog open={open} onClose={handleClose}>
-                  {/* <DialogTitle>Subscribe</DialogTitle> */}
-                  <DialogContent className="signinClass">
-                    <TextField
-                      autoFocus
-                      required
-                      margin="dense"
-                      id="name"
-                      label="Email Address"
-                      type="email"
-                      fullWidth
-                      autoComplete="email"
-                      variant="standard"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                    />
-                    <TextField
-                      autoFocus
-                      margin="dense"
-                      id="password"
-                      label="Password"
-                      type="email"
-                      fullWidth
-                      required
-                      variant="standard"
-                      autoComplete="current-password"
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                    />
-                  </DialogContent>
-                  <DialogContent
-                    className="registerClass"
-                    sx={{ display: "none" }}
-                  >
-                    <TextField
-                      autoFocus
-                      required
-                      margin="dense"
-                      id="name"
-                      label="Email Address"
-                      type="email"
-                      fullWidth
-                      autoComplete="email"
-                      variant="standard"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                    />
-                    <TextField
-                      autoFocus
-                      margin="dense"
-                      id="password"
-                      label="Password"
-                      type="email"
-                      fullWidth
-                      required
-                      variant="standard"
-                      autoComplete="current-password"
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                    />
-                  </DialogContent>
-                  <DialogActions>
-                    <Button onClick={submitHandler}>Sign In</Button>
-                    <Link to="/register">
-                      <Button onClick={handleClose}>Register</Button>
-                    </Link>
-                  </DialogActions>
-                </Dialog>
-              </div>
+              <div className="upload">Login</div>
             </Link>
           </div>
         </ul>
