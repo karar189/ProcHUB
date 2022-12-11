@@ -22,7 +22,7 @@ export const userRegister = (username, email, password) => async (dispatch) => {
     };
     const baseUrl = "http://localhost:5000/";
     const { data } = await axios.post(
-      baseUrl + "/register",
+      baseUrl + "/users/signup",
       { email, password, username },
       config
     );
@@ -54,8 +54,7 @@ export const userLogin = (email, password) => async (dispatch, getState) => {
     };
 
     const { data } = await axios.post(
-      // baseUrl + "/users/login",
-      baseUrl,
+      baseUrl + "users/login",
       { email, password },
       config
     );
