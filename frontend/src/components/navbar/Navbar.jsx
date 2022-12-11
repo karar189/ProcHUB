@@ -17,6 +17,7 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
+import Alert from "@mui/material/Alert";
 
 const Navbar = () => {
   const [open, setOpen] = React.useState(false);
@@ -62,12 +63,15 @@ const Navbar = () => {
         history.push("/");
       }
     } else {
-      setError("Please Provide Your Credentials Properly!");
+      alert("Please Provide Your Credentials Properly!");
     }
+    console.log("email", email);
+    console.log("password", password);
   };
 
   return (
     <>
+      {error ? <Alert severity="error">{error}</Alert> : ""}
       <nav role="navigation">
         <ul id="menu">
           <div className="left">
