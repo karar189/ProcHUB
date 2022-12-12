@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { userLogin } from '../../redux/actions/userAction';
-import { userLogout } from "../../redux/actions/userAction"
+import { userLogout } from '../../redux/actions/userAction';
 import { useDispatch, useSelector } from 'react-redux';
+
 
 import './navbar.css';
 import { Routes, Route, Link, BrowserRouter as Router } from 'react-router-dom';
@@ -10,18 +11,15 @@ import logo1 from '../../assets/elipse.svg';
 import search from '../../assets/search.svg';
 import profile from '../../assets/profile.svg';
 
-
 const Navbar = () => {
-  
   const [toggle, setToggle] = useState(false);
   const dispatch = useDispatch();
-
+  const { userInfo } = useSelector((state) => state.userLogin);
+  console.log(userInfo);
   //handling logout
   const handleLogout = () => {
     dispatch(userLogout());
   };
-
-
 
   return (
     <>
@@ -46,17 +44,24 @@ const Navbar = () => {
               <img src={search} alt="searchicon" id="searchId" />
               <input type="search" placeholder="Search..." id="searchInput" />
             </div>
+
+            {!userInfo ? (
+              <div className="upload__disabled">Upload</div>
+            ) : (
             <Link to="/upload" style={{ textDecoration: 'none' }}>
               <div className="upload">Upload</div>
             </Link>
+            )}
 
-            <Link to="/login" style={{ textDecoration: 'none' }}>
-              {/* <img src={profile} alt="logo" className="profile" /> */}
-              <div className="upload">Login</div>
-            </Link>
-            <Link style={{ textDecoration: 'none' }}  onClick={handleLogout}>
-              <div className="upload"> Logout</div>
-            </Link>
+            {!userInfo ? (
+              <Link to="/login" style={{ textDecoration: 'none' }}>
+                <div className="upload">Login</div>
+              </Link>
+            ) : (
+              <Link style={{ textDecoration: 'none' }} onClick={handleLogout}>
+                <div className="upload"> Logout</div>
+              </Link>
+            )}
           </div>
         </ul>
       </nav>

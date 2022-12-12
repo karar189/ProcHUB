@@ -8,7 +8,7 @@ import {
   UPDATEDETAILS
 } from '../actionTypes/projectConstants';
 
-const url = 'http://localhost:5000/';
+const url = 'http://localhost:5000';
 
 export const getPosts = () => async (dispatch, getState) => {
   try {
@@ -44,7 +44,7 @@ export const createPost = (title, body) => async (dispatch, getState) => {
         Authorization: `Bearer ${userInfo.token}`
       }
     };
-    const { data } = await axios.post(url + "/users/notes", { title, body }, config);
+    const { data } = await axios.post(url + "/users/project", { title, body }, config);
     console.log(data);
     const action = { type: CREATE, payload: data };
     dispatch(action);

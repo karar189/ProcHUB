@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 // Redux
 import { userRegister } from '../../redux/actions/userAction';
 import { useDispatch, useSelector } from 'react-redux';
+import { toast } from 'react-toastify';
 
 const Register = () => {
   const [username, setUsername] = useState('');
@@ -19,21 +20,23 @@ const Register = () => {
   //redux
   const dispatch = useDispatch();
   const { userInfo } = useSelector(state => state.userLogin);
-  const { serverError, userInfo: serverData } = useSelector(state => state.userRegister);
+  const { serverError } = useSelector(state => state.userRegister);
+
   //Redirect to Homepage if loggedin
   useEffect(
     history => {
-      if (userInfo || serverData) {
+      if (userInfo) {
         navigate('/');
       }
     },
-    [history, userInfo, serverData]
+    [history, userInfo]
   );
 
-  //serverside validation
+ // serverside validation
   useEffect(() => {
     if (serverError !== null) {
-      setError(serverError.mesaage);
+      //setError(serverError.mesaage);
+      toast.error(serverError)
     }
   }, [serverError]);
 

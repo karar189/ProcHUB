@@ -8,6 +8,7 @@ import ProjectRouter from "./routes/projectRoute.js";
 
 //db connection import
 import mongooseConnection from "./config/db.js";
+import { errorHandler, notFound } from "./middleware/errorMiddleware.js";
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
@@ -27,6 +28,11 @@ app.use("/", HomeRouter);
 app.use("/users/project", ProjectRouter);
 app.use("/users", UserRouter);
 // app.use('/reset', ResetRouter)
+
+// custom middleware
+app.use(notFound);
+app.use(errorHandler);
+
 
 //Server Listen
 const PORT = process.env.PORT || 5000;

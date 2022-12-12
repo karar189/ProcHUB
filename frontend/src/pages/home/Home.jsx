@@ -66,7 +66,7 @@ const Home = () => {
           </a>
 
           <Link to="/register">
-            <button type="button"> Sign up today</button>
+            <button type="button"> Register today</button>
           </Link>
         </div>
 
