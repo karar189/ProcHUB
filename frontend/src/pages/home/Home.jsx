@@ -23,7 +23,7 @@ const Home = () => {
         // border: "1px solid red",
       },
       '& .MuiTab-root.Mui-selected': {
-        color: 'white'
+        color: '#eaaeff',
       },
       '& button': {
         color: 'white',
@@ -33,9 +33,12 @@ const Home = () => {
       },
 
       '& .button:active': {
-        outline: 'none',
+        outline: 'pink',
         backgroundColor: 'blue'
       }
+      // style to show focused button coloured
+      
+
     }
   });
 
