@@ -10,7 +10,7 @@ import {
 
 const url = 'http://localhost:5000';
 
-export const getPosts = () => async (dispatch, getState) => {
+export const getPosts = (title, body) => async (dispatch, getState) => {
   try {
     const {
       userLogin: { userInfo }
@@ -22,13 +22,13 @@ export const getPosts = () => async (dispatch, getState) => {
         Authorization: `Bearer ${userInfo.token}`
       }
     };
-    const { data } = await axios.get(url, config);
-    // console.log("ACTION:", data);
+    const { data } = await axios.get(url + '/users/project', { title, body }, config);
+    console.log('ACTION:', data);
 
     const action = { type: FETCH_ALL, payload: data };
     dispatch(action);
   } catch (error) {
-    // console.log(error);
+    console.log(error);
   }
 };
 
@@ -44,7 +44,7 @@ export const createPost = (title, body) => async (dispatch, getState) => {
         Authorization: `Bearer ${userInfo.token}`
       }
     };
-    const { data } = await axios.post(url + "/users/project", { title, body }, config);
+    const { data } = await axios.post(url + '/users/project', { title, body }, config);
     console.log(data);
     const action = { type: CREATE, payload: data };
     dispatch(action);
