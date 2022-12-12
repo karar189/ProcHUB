@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { userLogin } from '../../redux/actions/userAction';
+import { userLogout } from "../../redux/actions/userAction"
 import { useDispatch, useSelector } from 'react-redux';
 
 import './navbar.css';
@@ -9,18 +10,18 @@ import logo1 from '../../assets/elipse.svg';
 import search from '../../assets/search.svg';
 import profile from '../../assets/profile.svg';
 
-// import * as React from "react";
-import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
-import Alert from '@mui/material/Alert';
 
 const Navbar = () => {
   
+  const [toggle, setToggle] = useState(false);
+  const dispatch = useDispatch();
+
+  //handling logout
+  const handleLogout = () => {
+    dispatch(userLogout());
+  };
+
+
 
   return (
     <>
@@ -52,6 +53,9 @@ const Navbar = () => {
             <Link to="/login" style={{ textDecoration: 'none' }}>
               {/* <img src={profile} alt="logo" className="profile" /> */}
               <div className="upload">Login</div>
+            </Link>
+            <Link style={{ textDecoration: 'none' }}  onClick={handleLogout}>
+              <div className="upload"> Logout</div>
             </Link>
           </div>
         </ul>
