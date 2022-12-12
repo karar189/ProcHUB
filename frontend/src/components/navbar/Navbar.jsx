@@ -4,7 +4,6 @@ import { userLogin } from '../../redux/actions/userAction';
 import { userLogout } from '../../redux/actions/userAction';
 import { useDispatch, useSelector } from 'react-redux';
 
-
 import './navbar.css';
 import { Routes, Route, Link, BrowserRouter as Router } from 'react-router-dom';
 import logo1 from '../../assets/elipse.svg';
@@ -14,11 +13,15 @@ import profile from '../../assets/profile.svg';
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const dispatch = useDispatch();
-  const { userInfo } = useSelector((state) => state.userLogin);
+  const { userInfo } = useSelector(state => state.userLogin);
   console.log(userInfo);
   //handling logout
   const handleLogout = () => {
     dispatch(userLogout());
+  };
+  //showing please login first alert
+  const handleAlert = () => {
+    alert('Please login first');
   };
 
   return (
@@ -46,11 +49,13 @@ const Navbar = () => {
             </div>
 
             {!userInfo ? (
-              <div className="upload__disabled">Upload</div>
+              <Link onClick={handleAlert} style={{ textDecoration: 'none' }}>
+                <div className="upload">Upload</div>
+              </Link>
             ) : (
-            <Link to="/upload" style={{ textDecoration: 'none' }}>
-              <div className="upload">Upload</div>
-            </Link>
+              <Link to="/upload" style={{ textDecoration: 'none' }}>
+                <div className="upload">Upload</div>
+              </Link>
             )}
 
             {!userInfo ? (
@@ -60,7 +65,9 @@ const Navbar = () => {
             ) : (
               <Link style={{ textDecoration: 'none' }} onClick={handleLogout}>
                 <div className="upload"> Logout</div>
+                {/* <img src={profile} alt="" /> */}
               </Link>
+              //to show profile avatar image
             )}
           </div>
         </ul>
