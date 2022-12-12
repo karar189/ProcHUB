@@ -45,11 +45,11 @@ export const createPost = (title, body) => async (dispatch, getState) => {
       }
     };
     const { data } = await axios.post(url, { title, body }, config);
-    // console.log(data);
+    console.log(data);
     const action = { type: CREATE, payload: data };
     dispatch(action);
   } catch (error) {
-    // console.log(error);
+    console.log(error);
   }
 };
 

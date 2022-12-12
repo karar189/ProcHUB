@@ -11,6 +11,8 @@ import ProjectPage from './pages/projectPage/ProjectPage';
 import Register from './pages/register/Register';
 import Login from './pages/login/Login';
 import Footer from './components/footer/Footer';
+import NewProject from './pages/newProject/NewProject';
+
 
 function App() {
   return (
@@ -28,6 +30,7 @@ function App() {
             <Route path="/projects" element={<Catalogue />} />
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/upload" element={<NewProject />} />
             <Route path="/projects/project-page" element={<ProjectPage />} />
           </Routes>
         </div>

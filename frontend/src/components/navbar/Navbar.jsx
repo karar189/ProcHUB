@@ -46,7 +46,7 @@ const Navbar = () => {
               <img src={search} alt="searchicon" id="searchId" />
               <input type="search" placeholder="Search..." id="searchInput" />
             </div>
-            <Link to="/" style={{ textDecoration: 'none' }}>
+            <Link to="/upload" style={{ textDecoration: 'none' }}>
               <div className="upload">Upload</div>
             </Link>
 
