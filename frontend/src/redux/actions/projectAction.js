@@ -44,7 +44,7 @@ export const createPost = (title, body) => async (dispatch, getState) => {
         Authorization: `Bearer ${userInfo.token}`
       }
     };
-    const { data } = await axios.post(url, { title, body }, config);
+    const { data } = await axios.post(url + "/users/notes", { title, body }, config);
     console.log(data);
     const action = { type: CREATE, payload: data };
     dispatch(action);
