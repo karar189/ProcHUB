@@ -1,0 +1,149 @@
+.header {
+  background-image: url(../../assets/catalogubg.JPG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: 100vw;
+}
+
+.header h1 {
+  font-family: "Anton";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  letter-spacing: 0.15em;
+  display: flex;
+  margin-right: 56%;
+  align-items: center;
+  background: linear-gradient(
+    90deg,
+    #eaaeff 7.59%,
+    #d1adff 42.39%,
+    #a9d6ff 70.31%,
+    #ffffff 90.07%,
+    rgba(255, 255, 255, 0) 90.07%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.header h3 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  margin-right: 33%;
+  font-size: 20px;
+  line-height: 29px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #f7e1ff;
+}
+
+.heroes {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 60vh;
+  width: 100vw;
+  margin-left: -480px;
+}
+
+.filters {
+  font-family: "Anton";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  letter-spacing: 0.15em;
+  display: flex;
+  width: 200px;
+  margin-right: 56%;
+  align-items: center;
+  background: linear-gradient(
+    90deg,
+    #eaaeff 7.59%,
+    #d1adff 42.39%,
+    #a9d6ff 70.31%,
+    #ffffff 90.07%,
+    rgba(255, 255, 255, 0) 90.07%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  padding-bottom: 80px;
+}
+
+.funnel {
+  height: 25px;
+  width: 25px;
+  padding-right: 25px;
+}
+
+.drop{
+  height: 10px;
+  width: 14px;
+  padding-top: 10px;
+  padding-left: 5px;
+  margin-bottom:5px;
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+}
+
+.drop-box{
+  display: flex;
+  flex-direction: column;
+}
+
+.dropbtn {
+  display: flex;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 29px;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  background: rgba(6, 6, 6, 0.1);
+  backdrop-filter: blur(14px);
+  padding-bottom: 15px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #010101;}

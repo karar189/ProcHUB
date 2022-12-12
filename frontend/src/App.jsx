@@ -8,7 +8,7 @@ import Ranks from "./pages/ranks/Ranks";
 import Project from "./pages/project/Project";
 import ProjectPage from "./pages/projectPage/ProjectPage";
 import Navbar from "./components/navbar/Navbar";
-import Catalogue from "./pages/catalogue/catalogue";
+import Catalogue from "./pages/Catalogue/Catalogue";
 import Footer from "./components/footer/Footer";
 
 function App() {
@@ -23,15 +23,18 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/blogs" element={<Blogs />} />
-            <Route path="/ranks" elemnet={<Ranks />} />
-            {/* <Route path="/project" elemnet={<Project />} /> */}
-            {/* <Route path="/projects" element={<Catalogue />} /> */}
+            <Route path="/ranks" element={<Ranks />} />
+          
+            <Route path="/projects/project-page" element={<ProjectPage/>} />
 
-            <Route path="/projects/project-page" element={<ProjectPage />} />
+            <Route path="/projects/list" element
+            ={<Catalogue />} />
+
+            
           </Routes>
         </div>
 
-        <Footer />
+        {/* <Footer /> */}
       </Router>
     </>
   );
