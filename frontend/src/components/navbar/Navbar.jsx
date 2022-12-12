@@ -20,56 +20,10 @@ import DialogTitle from '@mui/material/DialogTitle';
 import Alert from '@mui/material/Alert';
 
 const Navbar = () => {
-  const [open, setOpen] = React.useState(false);
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-  const handleClose = () => {
-    setOpen(false);
-  };
-  const history = useNavigate();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
-
-  // REDUX
-  const dispatch = useDispatch();
-  const { userInfo, isAuthenticated, serverError } = useSelector(state => state.userLogin);
-  // redirect to home page if logged in
-  useEffect(() => {
-    if (userInfo) {
-      history.push('/');
-    }
-  }, [history, userInfo]);
-  useEffect(() => {
-    if (serverError === 'Request failed with status code 404') {
-      setError('No account associated with this email');
-    }
-  }, [serverError]);
-  useEffect(() => {
-    if (serverError === 'Request failed with status code 401') {
-      setError('Invalid email or password');
-    }
-  }, [serverError]);
-
-  // submit handler
-  const submitHandler = event => {
-    event.preventDefault();
-    if (email !== '' && password !== '') {
-      dispatch(userLogin(email, password));
-      if (isAuthenticated) {
-        history.push('/');
-      }
-    } else {
-      alert('Please Provide Your Credentials Properly!');
-    }
-    console.log('email', email);
-    console.log('password', password);
-  };
+  
 
   return (
     <>
-      {error ? <Alert severity="error">{error}</Alert> : ''}
       <nav role="navigation">
         <ul id="menu">
           <div className="left">

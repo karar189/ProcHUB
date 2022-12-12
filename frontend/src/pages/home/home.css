@@ -57,10 +57,40 @@
     #ffffff 90.07%,
     rgba(255, 255, 255, 0) 90.07%
   );
+
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
+}
+
+.title .left p{
+  font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 22px;
+line-height: 49px;
+letter-spacing: 0.05em;
+color: #F7E1FF;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 5px;
+
+
+}
+.title .right p{
+  font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 29px;
+text-align: center;
+letter-spacing: 0.05em;
+
+color: #F7E1FF;
+padding: 10px;
+
 }
 
 .button-div {
@@ -171,12 +201,26 @@
   margin-top: 70px;
   height: 180vh;
 }
+.featured .header p{
+  width: 400px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  color: #f7e1ff;
+  /* margin-top: -10px; */
+  text-align: center;
+
+}
 
 .title {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 70vw;
+  align-items: center;
+  width: 80vw;
 }
 
 .card-section {
@@ -277,10 +321,7 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
-  /* or 200% */
-
   letter-spacing: 0.05em;
-
   color: #f7e1ff;
   margin-top: -10px;
 }

@@ -83,8 +83,11 @@ const Home = () => {
         </div>
       </div>
       <div className="featured">
+        <div className="header">
         <h1 className="heading ">Featured Projects</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      
         <br />
         <br />
         <div className="slider">
@@ -133,7 +136,7 @@ const Home = () => {
         <br />
         <div className="title">
           <div className="left ">
-            <p>Top 3 of 109 NFT Projects</p>
+            <p ><span className='herotext'><h3 style={{width: "75px"}}>Top 3</h3></span>  of <span className='herotext'><h3 style={{width: "50px"}}> 109 </h3></span> NFT Projects</p>
           </div>
           <div className="right">
             <p>View all</p>

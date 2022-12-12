@@ -12,7 +12,7 @@ const ProjectCard = () => {
     <>
       <div className="box-card">
         <div className="img-proc">
-          <img src={proc1} alt="background-img" srcset="" />
+          <img src={proc1} alt="background-img"  />
         </div>
         <div className="content">
           <h1>Project Name</h1>
