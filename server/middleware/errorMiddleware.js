@@ -19,7 +19,7 @@ export const notFound = (req, res, next) => {
  * @param {NextFunction} next
  * @purpose Handle all errors
  */
-export const errorHandler = (err, req, res) => {
+export const errorHandler = (err, req, res, next) => {
   const statusCode = res.statusCode === 200 ? 500 : res.statusCode;
   res.status(statusCode);
   console.log(err.message);

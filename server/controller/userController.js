@@ -2,36 +2,34 @@ import { generateToken } from "../utils/generateToken.js";
 import user from "../models/userModel.js";
 import Mongoose from "mongoose";
 import bcrypt from "bcrypt";
+import { catchAsync } from "../utils/catchAsync.js";
 
 //@purpose: new user and get token
 //@route:  POST user/register
 //@access  Public
-export const registerUser = async (req, res, next) => {
+export const registerUser = catchAsync(async (req, res, next) => {
   const { username, email, password } = req.body;
+  if (!username || !email || !password) {
+    res.status(400);
+    const err = new Error("Please fill all the fields");
+    next(err);
+  }
   const userExists = await user.findOne({ email: email });
   if (userExists) {
-    res.status(400);
-    let err = new Error("User already exists");
-    next(err);
-  } else {
-    const User = await user.create({
-      username,
-      email,
-      password,
-    });
-    if (User) {
-      res.json({
-        _id: User._id,
-        name: User.username,
-        password: User.password,
-      });
-    } else {
-      res.status(404);
-      const err = new Error("Invalid User Data");
-      next(err);
-    }
+    throw new Error("User already exists");
   }
-};
+  const User = await user.create({
+    username,
+    email,
+    password,
+  });
+
+    res.json({
+      _id: User._id,
+      name: User.username,
+      password: User.password,
+    });
+});
 
 // @purpose: Auth user and get token
 // @route: user/login

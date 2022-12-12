@@ -2,13 +2,15 @@ import express from "express";
 import morgan from "morgan";
 import cors from "cors";
 import bodyParser from "body-parser";
+
+import { errorHandler, notFound } from "./middleware/errorMiddleware.js";
+
 import HomeRouter from "./routes/homeRoute.js";
 import UserRouter from "./routes/authRouter.js";
 import ProjectRouter from "./routes/projectRoute.js";
 
 //db connection import
 import mongooseConnection from "./config/db.js";
-import { errorHandler, notFound } from "./middleware/errorMiddleware.js";
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
@@ -22,6 +24,7 @@ app.use(bodyParser.json({ limit: "30mb", extended: "true" }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: "true" }));
 app.use(morgan("dev"));
 app.use(cors());
+app.options('*', cors());
 
 //Routes
 app.use("/", HomeRouter);
