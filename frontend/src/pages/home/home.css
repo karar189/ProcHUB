@@ -1,12 +1,17 @@
 .hero {
-  /* background-image: url(../../assets/apple-bg.svg); */
+  background-image: url(../../assets/apple-bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* height: 100vh; */
+  height: 100vh;
   width: 100vw;
-  background-color: #1e1e1e;
+  background-color: #000000;
   /* overflow-x: hidden !important; */
   width: 100vw !important;
   font-family: "Questrial", sans-serif;
@@ -52,10 +57,40 @@
     #ffffff 90.07%,
     rgba(255, 255, 255, 0) 90.07%
   );
+
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
+}
+
+.title .left p{
+  font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 22px;
+line-height: 49px;
+letter-spacing: 0.05em;
+color: #F7E1FF;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 5px;
+
+
+}
+.title .right p{
+  font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 29px;
+text-align: center;
+letter-spacing: 0.05em;
+
+color: #F7E1FF;
+padding: 10px;
+
 }
 
 .button-div {
@@ -64,7 +99,7 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
-  width: 300px;
+  width: 400px;
 }
 .button-div button {
   background: #171717;
@@ -161,7 +196,159 @@
 .featured {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   margin-top: 70px;
+  /* height: 100vh; */
+}
+.featured .header p{
+  width: 400px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  color: #f7e1ff;
+  /* margin-top: -10px; */
+  text-align: center;
+
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 80vw;
+}
+
+.card-section {
+  display: flex;
+  justify-content: space-evenly;
+  width: 90vw;
+  /* flex-direction: column; */
+}
+
+.upload-btn {
+  background: #171717;
+  backdrop-filter: blur(15px);
+  border-radius: 12px;
+  padding: 9px 20px;
+  /* width: 120px;
+  height: 45px; */
+  cursor: pointer;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 29px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+.upload-btn:hover {
+  background: linear-gradient(
+    190deg,
+    #1b161d 7.59%,
+    #2f29387c 42.39%,
+    #0000007c 70.31%,
+    #0303039d 90.07%,
+    rgba(0, 0, 0, 0) 100.07%
+  );
+  color: #ffffff;
+  border: 1px solid #8c8692;
+}
+
+.upload-btn a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.about-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  padding: 10px
+  /* margin-top: -180px; */
+}
+
+.about1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+  width: 80vw;
+
+  padding: 10px 20px;
+}
+
+.about1-left {
+  display: flex;
+  flex-direction: column;
+  width: 35vw;
+  padding: 0 20px;
+}
+.about1-left h1 {
+  font-family: "Anton";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 45px;
+  letter-spacing: 0.05em;
+
+  background: linear-gradient(
+    80deg,
+    #eaaeff 7.59%,
+    #d1adff 42.39%,
+    #a9d6ff 70.31%,
+    #ffffff 100.07%,
+    rgba(255, 255, 255, 0) 90.07%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  color: #ffffff;
+}
+.about1-left p {
+  width: 450px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  color: #f7e1ff;
+  margin-top: -10px;
+}
+.about1-left .button {
+  background: #171717;
+  backdrop-filter: blur(15px);
+  width: 200px;
+  border-radius: 15px;
+  border: white 1px solid;
+}
+.about1-left .button a {
+  padding: 20px 20px;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 10px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  display: flex;
+  justify-content: center;
+}
+
+.about1-right {
+  display: flex;
+  flex-direction: column;
+  width: 25vw;
+  padding: 0 20px;
 }

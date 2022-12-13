@@ -12,8 +12,9 @@ nav {
 
   border-radius: 20px;
   width: 80vw;
+  height: 6vw;
   margin: 0 auto;
-  padding: 0 1rem;
+  /* padding: 0 1rem; */
   position: relative;
   top: 20px;
   /* height: 80px; */
@@ -25,16 +26,122 @@ nav {
 nav #menu {
   display: flex;
   width: 100vw;
-  justify-content: space-evenly;
+  justify-content: space-between;
+}
+
+nav .left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+}
+nav .right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 38%;
+  margin: 0 2rem;
 }
 nav img {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0.5rem 1rem;
+}
+nav a {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+
+  text-align: center;
+  letter-spacing: 0.1em;
+
+  color: #ffffff;
+}
+
+nav input {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  border: none;
+  padding: 0.7rem 0em;
+  color: #ffffff;
+}
+nav input:focus {
+  outline: none;
+}
+.input {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#searchId {
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+  position: absolute;
+  left: 10px;
+}
+#searchId:hover {
+  /* transform: scale(1.1); */
+}
+#searchInput::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  /* padding-left: 35px; */
+}
+#searchInput::-moz-placeholder {
+  /* Firefox 19+ */
+  /* padding-left: 35px; */
+}
+#searchInput:-ms-input-placeholder {
+  /* IE 10+ */
+  /* padding-left: 35px; */
+}
+#searchInput:-moz-placeholder {
+  /* Firefox 18- */
+  /* padding-left: 35px; */
+}
+.input input {
+  padding-left: 45px;
+}
+
+.upload {
+  border: 1px solid #ffffff;
+
+  background: #171717;
+  border-radius: 11px;
+  padding: 6px 16px;
+}
+
+.upload__disabled{
+  border: 1px solid #ffffff;
+
+  background: #6b6b6b;
+  border-radius: 11px;
+  padding: 6px 16px;
+}
+
+.upload a {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  /* identical to box height */
+
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  background: linear-gradient(90deg, #e9d8ff 0%, #f4d6ff 52.6%, #d9edff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }

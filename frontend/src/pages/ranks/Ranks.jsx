@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 const Ranks = () => {
-  return (
-    <div>Lodu</div>
-  )
-}
+  return <div>Lodu</div>;
+};
 
 export default Ranks;

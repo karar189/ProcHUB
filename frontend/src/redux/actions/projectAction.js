@@ -1,0 +1,118 @@
+import axios from 'axios';
+
+import {
+  FETCH_ALL,
+  CREATE,
+  UPDATE,
+  DELETE,
+  UPDATEDETAILS
+} from '../actionTypes/projectConstants';
+
+const url = 'http://localhost:5000';
+
+export const getPosts = (title, body) => async (dispatch, getState) => {
+  try {
+    const {
+      userLogin: { userInfo }
+    } = getState();
+
+    const config = {
+      'Content-Type': 'application/json',
+      headers: {
+        Authorization: `Bearer ${userInfo.token}`
+      }
+    };
+    const { data } = await axios.get(url + '/users/project', { title, body }, config);
+    console.log('ACTION:', data);
+
+    const action = { type: FETCH_ALL, payload: data };
+    dispatch(action);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const createPost = (title, body) => async (dispatch, getState) => {
+  try {
+    const {
+      userLogin: { userInfo }
+    } = getState();
+
+    const config = {
+      'Content-Type': 'application/json',
+      headers: {
+        Authorization: `Bearer ${userInfo.token}`
+      }
+    };
+    const { data } = await axios.post(url + '/users/project', { title, body }, config);
+    console.log(data);
+    const action = { type: CREATE, payload: data };
+    dispatch(action);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const getUpdates = id => async (dispatch, getState) => {
+  try {
+    const {
+      userLogin: { userInfo }
+    } = getState();
+
+    const config = {
+      'Content-Type': 'application/json',
+      headers: {
+        Authorization: `Bearer ${userInfo.token}`
+      }
+    };
+    const { data } = await axios.get(`${url}/${id}`, config);
+    // console.log("ACTION:", data);
+
+    const action = { type: UPDATEDETAILS, payload: data };
+    dispatch(action);
+  } catch (error) {
+    // console.log(error);
+  }
+};
+
+export const updatePost = (id, title, body) => async (dispatch, getState) => {
+  try {
+    const {
+      userLogin: { userInfo }
+    } = getState();
+
+    const config = {
+      'Content-Type': 'application/json',
+      headers: {
+        Authorization: `Bearer ${userInfo.token}`
+      }
+    };
+    // console.log(userInfo);
+
+    const { data } = await axios.put(`${url}/${id}`, { title, body }, config);
+    const action = { type: UPDATE, payload: data };
+    dispatch(action);
+  } catch (error) {
+    // console.log("error");
+  }
+};
+
+export const deletePost = id => async (dispatch, getState) => {
+  try {
+    const {
+      userLogin: { userInfo }
+    } = getState();
+
+    const config = {
+      'Content-Type': 'application/json',
+      headers: {
+        Authorization: `Bearer ${userInfo.token}`
+      }
+    };
+    await axios.delete(`${url}/${id}`, config);
+    const action = { type: DELETE, payload: id };
+    dispatch(action);
+  } catch (error) {
+    // console.log(error);
+  }
+};
