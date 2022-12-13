@@ -12,18 +12,16 @@ import {
 
 const url = 'http://localhost:5000';
 
-
-
-export const getPosts = () => async (dispatch) => {
+export const getPosts = () => async dispatch => {
   let config = {
     'Content-Type': 'application/json'
   };
-  let url = 'http://localhost:5000'+ '/users/project';
+  let url = 'http://localhost:5000' + '/users/project';
   try {
     dispatch({
       type: FETCH_ALL_REQUEST
     });
-    const { data } = await axios.get(url , config);
+    const { data } = await axios.get(url, config);
     dispatch({ type: FETCH_ALL, payload: data });
   } catch (error) {
     console.log(error);
@@ -37,7 +35,7 @@ export const getPosts = () => async (dispatch) => {
   }
 };
 
-export const createPost = (title, body) => async (dispatch, getState) => {
+export const createPost = (title, body, image) => async (dispatch, getState) => {
   try {
     const {
       userLogin: { userInfo }
@@ -49,7 +47,7 @@ export const createPost = (title, body) => async (dispatch, getState) => {
         Authorization: `Bearer ${userInfo.token}`
       }
     };
-    const { data } = await axios.post(url + '/users/project', { title, body }, config);
+    const { data } = await axios.post(url + '/users/project', { title, body, image }, config);
     console.log(data);
     const action = { type: CREATE, payload: data };
     dispatch(action);
