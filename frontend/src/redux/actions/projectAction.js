@@ -5,30 +5,35 @@ import {
   CREATE,
   UPDATE,
   DELETE,
-  UPDATEDETAILS
+  UPDATEDETAILS,
+  FETCH_ALL_REQUEST,
+  FETCH_ALL_ERROR
 } from '../actionTypes/projectConstants';
 
 const url = 'http://localhost:5000';
 
-export const getPosts = (title, body) => async (dispatch, getState) => {
+
+
+export const getPosts = () => async (dispatch) => {
+  let config = {
+    'Content-Type': 'application/json'
+  };
+  let url = 'http://localhost:5000'+ '/users/project';
   try {
-    const {
-      userLogin: { userInfo }
-    } = getState();
-
-    const config = {
-      'Content-Type': 'application/json',
-      headers: {
-        Authorization: `Bearer ${userInfo.token}`
-      }
-    };
-    const { data } = await axios.get(url + '/users/project', { title, body }, config);
-    console.log('ACTION:', data);
-
-    const action = { type: FETCH_ALL, payload: data };
-    dispatch(action);
+    dispatch({
+      type: FETCH_ALL_REQUEST
+    });
+    const { data } = await axios.get(url , config);
+    dispatch({ type: FETCH_ALL, payload: data });
   } catch (error) {
     console.log(error);
+    dispatch({
+      type: FETCH_ALL_ERROR,
+      payload:
+        error.response && error.response.data.message
+          ? error.response.data.message
+          : error.message
+    });
   }
 };
 

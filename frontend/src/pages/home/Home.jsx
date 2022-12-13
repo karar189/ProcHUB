@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
 import { Routes, Route, Link, BrowserRouter as Router } from 'react-router-dom';
 import './home.css';
@@ -10,6 +10,8 @@ import { makeStyles } from '@mui/styles';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
+import { useDispatch, useSelector } from 'react-redux';
+import { getPosts } from '../../redux/actions/projectAction';
 
 const Home = () => {
   const useStyles = makeStyles({
@@ -43,11 +45,28 @@ const Home = () => {
   });
 
   const [value, setValue] = React.useState(0);
-
+  const [counter, setCounter] = React.useState(true);
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
   const classes = useStyles();
+
+
+  let {project, error, loading} = useSelector(state => state.userProject)
+  const dispatch = useDispatch();
+  // useEffect(() => {
+  //   dispatch(getPosts())
+  // }, [dispatch])
+
+  useEffect(() => {
+    if(counter){
+    dispatch(getPosts());
+    console.log('dispatched');
+    setCounter(false);
+  }
+  }, [dispatch]);
+
+   console.log(project, error, loading);
 
   return (
     <>
@@ -93,7 +112,7 @@ const Home = () => {
       
         <br />
         <br />
-        <div className="slider">
+{/*        <div className="slider">
           {' '}
           <Box
             sx={{
@@ -135,6 +154,7 @@ const Home = () => {
             </Tabs>
           </Box>
         </div>
+*/}
         <br />
         <br />
         <div className="title">
@@ -147,9 +167,10 @@ const Home = () => {
         </div>
         <br />
         <div className="card-section">
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
+        {!loading && project && project.map((project, index) => {
+          if(index > 3) return
+          return <ProjectCard key={index} project={project} />
+        })}
         </div>
         <br />
         <br />

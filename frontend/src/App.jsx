@@ -12,7 +12,7 @@ import Register from './pages/register/Register';
 import Login from './pages/login/Login';
 import Footer from './components/footer/Footer';
 import NewProject from './pages/newProject/NewProject';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 

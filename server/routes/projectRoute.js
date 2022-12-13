@@ -10,7 +10,7 @@ import authMiddleware from "../middleware/authenticate.js";
 
 const router = express.Router();
 
-router.get("/", authMiddleware, getProjects);
+router.get("/", getProjects);
 router.post("/", authMiddleware, postProjects);
 router.get("/:id", authMiddleware, getUpdateProjects);
 router.put("/:id", authMiddleware, patchProjects);

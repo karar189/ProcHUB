@@ -6,6 +6,7 @@ const projectSchema = new Schema({
   username: {
     type: mongoose.Types.ObjectId,
     ref: "User",
+    default: null,
   },
   title: {
     type: String,
@@ -14,6 +15,10 @@ const projectSchema = new Schema({
   body: {
     type: String,
     required: true,
+  },
+  featuredImage: {
+    type: String,
+    default: null,
   },
 });
 
