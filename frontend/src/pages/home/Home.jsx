@@ -1,19 +1,38 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
-import { Routes, Route, Link, BrowserRouter as Router } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './home.css';
-import bg from '../../assets/apple-bg.svg';
 import illustration from '../../assets/Decentralised.svg';
 import { makeStyles } from '@mui/styles';
 // import makeStyles from "@mui/styles/makeStyles";
 
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import Box from '@mui/material/Box';
+// import Tabs from '@mui/material/Tabs';
+// import Tab from '@mui/material/Tab';
+// import Box from '@mui/material/Box';
 import { useDispatch, useSelector } from 'react-redux';
 import { getPosts } from '../../redux/actions/projectAction';
 
 const Home = () => {
+  const [counter, setCounter] = useState(true);
+  let {project, error, loading} = useSelector(state => state.userProject)
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getPosts())
+  }, [dispatch])
+
+  // useEffect(() => {
+
+  // }, [dispatch]);
+
+  // if(counter){
+  //   dispatch(getPosts());
+  //   console.log('dispatched');
+  //   setCounter(false);
+  // }
+
+   console.log(project, error, loading);
+
   const useStyles = makeStyles({
     tabs: {
       '& .MuiTab.root': {
@@ -44,29 +63,14 @@ const Home = () => {
     }
   });
 
-  const [value, setValue] = React.useState(0);
-  const [counter, setCounter] = React.useState(true);
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
+  // const [value, setValue] = React.useState(0);
+  // const handleChange = (event, newValue) => {
+  //   setValue(newValue);
+  // };
   const classes = useStyles();
 
 
-  let {project, error, loading} = useSelector(state => state.userProject)
-  const dispatch = useDispatch();
-  // useEffect(() => {
-  //   dispatch(getPosts())
-  // }, [dispatch])
 
-  useEffect(() => {
-    if(counter){
-    dispatch(getPosts());
-    console.log('dispatched');
-    setCounter(false);
-  }
-  }, [dispatch]);
-
-   console.log(project, error, loading);
 
   return (
     <>
@@ -167,10 +171,9 @@ const Home = () => {
         </div>
         <br />
         <div className="card-section">
-        {!loading && project && project.map((project, index) => {
-          if(index > 3) return
-          return <ProjectCard key={index} project={project} />
-        })}
+        {project && project.map((project, index) =>{
+          if(index > 2) return 
+          return ( <ProjectCard  project={project} />      )})}
         </div>
         <br />
         <br />
