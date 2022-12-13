@@ -52,11 +52,11 @@
   background-position: center;
   background-attachment: fixed;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  height: 60vh;
+  height: 80vh;
   width: 100vw;
-  margin-left: -480px;
+  width: 100vw;
 }
 
 .filters {
@@ -100,6 +100,20 @@
 .left-side {
   display: flex;
   flex-direction: column;
+  margin-left: 10vw;
+}
+
+/* .right-side{
+  display: flex;
+  height: 150vh;
+  flex-direction: column;
+  justify-content: space-between;
+} */
+
+.top-side{
+  display: flex;
+  width: 58vw;
+  justify-content: space-between;
 }
 
 .drop-box{

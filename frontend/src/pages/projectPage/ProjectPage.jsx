@@ -1,6 +1,5 @@
 import React from "react";
-import projectbg from "../../assets/projectbg.svg";
-import ProjectCard from "../../components/ProjectCard/ProjectCard";
+import ProjectCard2 from "../../components/ProjectCard2/ProjectCard2";
 import projectimg from "../../assets/projectimg.svg";
 import "./projectPage.css";
 import projectlogo from "../../assets/Projectlogo.svg";
@@ -133,9 +132,9 @@ const ProjectPage = () => {
         </div>
 
         <div className="card-section">
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
+          <ProjectCard2 />
+          <ProjectCard2 />
+          <ProjectCard2 />
         </div>
       </section>
 

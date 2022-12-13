@@ -1,5 +1,5 @@
 import React from "react";
-import "./project.css";
+import "./projectcard2.css";
 import facebook from "../../assets/facebook2.svg";
 import github from "../../assets/Github.svg";
 import twitter from "../../assets/twitter2.svg";

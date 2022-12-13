@@ -1,0 +1,103 @@
+.box-card{
+  height: 600px;
+}
+
+.img-proc {
+  height: 400px;
+}
+
+.card3-bg{
+  height: 300px;
+  margin-top: -72px;
+}
+
+.content{
+  display: flex;
+  margin-top: -150px;
+}
+
+.buttons{
+  width: 20vw;
+  margin-top: 40px;
+}
+
+.boxes{
+  width: 85px;
+  padding: 2.5px;
+}
+
+
+.content h2 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.content p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  width: 400px;
+
+  letter-spacing: 0.05em;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer{
+  display: flex;
+  margin-top: 60px;
+}
+
+
+.icons{
+  display: flex;
+  flex-direction: row ;
+  width: 18vw;
+}
+
+.icon-footer{
+  height: 30px;
+  width: 29.5px;
+  padding: 10px;
+}
+
+.view{
+
+  border: none;
+  letter-spacing: 0.05em;
+
+  /* Gradient_text */
+
+  background: linear-gradient(
+    90deg,
+    #eaaeff 7.59%,
+    #d1adff 42.39%,
+    #a9d6ff 70.31%,
+    #ffffff 90.07%,
+    rgba(255, 255, 255, 0) 180.07%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 48px;
+  cursor: pointer;
+  padding: 0 10px;
+  text-decoration: underline;
+  text-underline-position: under;
+  text-decoration-color: #ffffff;
+  text-underline-offset: 2px;
+
+  
+};

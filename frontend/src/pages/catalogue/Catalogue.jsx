@@ -2,6 +2,7 @@ import React from "react";
 import "./catalogue.css";
 import filter from "../../assets/filter.png";
 import drop from "../../assets/arrow-down.png";
+import ProjectCard3 from "../../components/ProjectCard3/ProjectCard3";
 
 const Catalogue = () => {
   return (
@@ -51,12 +52,18 @@ const Catalogue = () => {
             <button class="dropbtn">Ecosystem
             <img src={ drop} alt="drop" className="drop" />
             </button>
-
-
           </div>
 
         </div>
-        <div className="right-side"></div>
+
+        <div className="right-side">
+
+          <div className="top-side">
+          <ProjectCard3 />
+          <ProjectCard3 />
+          </div> 
+        </div>
+
       </section>
     </>
   );
