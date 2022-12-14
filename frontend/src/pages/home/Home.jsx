@@ -9,7 +9,6 @@ import { Link } from 'react-router-dom';
 import './home.css';
 import illustration from '../../assets/Decentralised.svg';
 import { makeStyles } from '@mui/styles';
-// import makeStyles from "@mui/styles/makeStyles";
 
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -186,7 +185,10 @@ const Home = () => {
             </p>
           </div>
           <div className="right">
-            <p>View all</p>
+            <Link to="/list" style={{ textDecoration: 'none' }}>
+              {' '}
+              <p>View all</p>
+            </Link>
           </div>
         </div>
         <br />
