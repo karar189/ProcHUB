@@ -7,8 +7,7 @@ import user from "../models/userModel.js";
 //@puropose : get all Projects from db for single user
 export const getProjects = async (req, res, next) => {
   try {
-    const Projectfetch = await project
-      .find()
+    const Projectfetch = await project.find();
     res.status(200).json(Projectfetch);
   } catch (error) {
     res.status(404);
@@ -26,8 +25,9 @@ export const postProjects = async (req, res, next) => {
     title: title,
     body: body,
     username: User._id,
-    featuredImage: image,
+    featuredImage: image.selectedFile,
   };
+  console.log(newpost);
 
   var newProjects = new project(newpost);
   try {
@@ -35,6 +35,7 @@ export const postProjects = async (req, res, next) => {
     await newProjects.save();
     res.status(201).json(newProjects);
   } catch (error) {
+    console.log(error.message);
     res.status(409).json({ message: error.message });
   }
 };

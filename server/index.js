@@ -20,11 +20,17 @@ app.use(express.json());
 mongooseConnection();
 
 //Middleware
-app.use(bodyParser.json({ limit: "30mb", extended: "true" }));
-app.use(bodyParser.urlencoded({ limit: "30mb", extended: "true" }));
+app.use(bodyParser.json({ limit: "50mb", extended: "true" }));
+app.use(
+  bodyParser.urlencoded({
+    limit: "100mb",
+    extended: true,
+    parameterLimit: 50000,
+  })
+);
 app.use(morgan("dev"));
 app.use(cors());
-app.options('*', cors());
+app.options("*", cors());
 
 //Routes
 app.use("/", HomeRouter);
@@ -35,7 +41,6 @@ app.use("/users", UserRouter);
 // custom middleware
 app.use(notFound);
 app.use(errorHandler);
-
 
 //Server Listen
 const PORT = process.env.PORT || 5000;

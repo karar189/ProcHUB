@@ -13,8 +13,8 @@ const ProjectCard = ({ project }) => {
     <>
       <div className="box-card">
         <div className="img-proc">
-          {project.image ? (
-            <img src={project.image} alt="background-img" />
+          {project.featuredImage ? (
+            <img src={project.featuredImage} alt="background-img" />
           ) : (
             <img src={proc1} alt="background-img" />
           )}
