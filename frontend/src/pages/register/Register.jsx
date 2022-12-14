@@ -32,11 +32,11 @@ const Register = () => {
     [history, userInfo]
   );
 
- // serverside validation
+  // serverside validation
   useEffect(() => {
     if (serverError !== null) {
       //setError(serverError.mesaage);
-      toast.error(serverError)
+      toast.error(serverError);
     }
   }, [serverError]);
 
@@ -77,6 +77,7 @@ const Register = () => {
       <div className="formbody">
         {error ? <Alert severity="error">{error}</Alert> : ''}
         <div className="form">
+          <h2 style={{ color: 'white' }}>Register</h2>
           <input
             id="Name"
             label="Your Name"

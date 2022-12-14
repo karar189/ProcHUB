@@ -15,13 +15,15 @@ const Login = () => {
 
   // REDUX
   const dispatch = useDispatch();
-  const { userInfo, isAuthenticated, serverError,serverData } = useSelector(state => state.userLogin);
+  const { userInfo, isAuthenticated, serverError, serverData } = useSelector(
+    state => state.userLogin
+  );
   // redirect to home page if logged in
   useEffect(() => {
     if (userInfo || serverData) {
       navigate('/');
     }
-  }, [ userInfo, serverData]);
+  }, [userInfo, serverData]);
 
   useEffect(() => {
     if (serverError === 'Request failed with status code 404') {
@@ -57,6 +59,7 @@ const Login = () => {
       <div className="formbody">
         {error ? <Alert severity="error">{error}</Alert> : ''}
         <div className="form">
+          <h2 style={{ color: 'white' }}>Login</h2>
           <input
             id="email"
             label="Email Address"
@@ -64,7 +67,7 @@ const Login = () => {
             autoComplete="email"
             placeholder="Email"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={e => setEmail(e.target.value)}
           />
           <input
             name="password"
@@ -74,7 +77,7 @@ const Login = () => {
             autoComplete="current-password"
             placeholder="Password"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={e => setPassword(e.target.value)}
           />
           <div className="button-class">
             <button type="submit" onClick={submitHandler}>
