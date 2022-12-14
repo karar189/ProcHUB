@@ -11,7 +11,7 @@ import {
 const initialstate = {
   project: [],
   error: null,
-  // data: {},
+  data: {},
   loading: false
 };
 
@@ -22,13 +22,10 @@ const Project = (state = initialstate, action) => {
     case FETCH_ALL:
       return { project: action.payload, loading: false, error: null };
     case FETCH_ALL_ERROR:
-      return { error: action.payload , loading: false, project: []};  
-    
-    
-    
-    //   case CREATE:
-    //   //console.log(data);
-    //   return { data: action.payload };
+      return { error: action.payload, loading: false, project: [] };
+    case CREATE:
+      console.log(data);
+      return { data: action.payload };
 
     // case UPDATEDETAILS:
     //   return { project: action.payload };

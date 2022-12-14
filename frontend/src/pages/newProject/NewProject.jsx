@@ -16,7 +16,7 @@ const NewProject = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    navigate('/');
+    navigate('/list');
 
     dispatch(createPost(postTitle, postDesc, postImg));
     console.log(postTitle);
