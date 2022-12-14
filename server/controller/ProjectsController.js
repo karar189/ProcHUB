@@ -8,10 +8,7 @@ import user from "../models/userModel.js";
 export const getProjects = async (req, res, next) => {
   try {
     const Projectfetch = await project
-      .find({
-        username: req.user._id,
-      })
-      .populate("username");
+      .find()
     res.status(200).json(Projectfetch);
   } catch (error) {
     res.status(404);
@@ -23,17 +20,13 @@ export const getProjects = async (req, res, next) => {
 //@purpose: : Post new Project by user
 export const postProjects = async (req, res, next) => {
   const User = await user.findOne({ _id: req.user._id });
-  var { title, body } = req.body;
-  console.log(req.body);
-
-  const accessToken = uuidv4();
+  var { title, body, image } = req.body;
 
   const newpost = {
     title: title,
     body: body,
     username: User._id,
-    accessToken: accessToken,
-    isValid: true,
+    featuredImage: image,
   };
 
   var newProjects = new project(newpost);

@@ -1,17 +1,40 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+
+import { useNavigate } from 'react-router-dom';
+import { userLogin } from '../../redux/actions/userAction';
+import { userLogout } from '../../redux/actions/userAction';
+import { useDispatch, useSelector } from 'react-redux';
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
-import { Routes, Route, Link, BrowserRouter as Router } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './home.css';
-import bg from '../../assets/apple-bg.svg';
 import illustration from '../../assets/Decentralised.svg';
 import { makeStyles } from '@mui/styles';
-// import makeStyles from "@mui/styles/makeStyles";
 
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 
+import { getPosts } from '../../redux/actions/projectAction';
+
 const Home = () => {
+  const [counter, setCounter] = useState(true);
+  let { project, error, loading } = useSelector(state => state.userProject);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getPosts());
+  }, [dispatch]);
+
+  useEffect(() => {}, [dispatch]);
+
+  if (counter) {
+    dispatch(getPosts());
+    console.log('dispatched');
+    setCounter(false);
+  }
+
+  console.log(project, error, loading);
+
   const useStyles = makeStyles({
     tabs: {
       '& .MuiTab.root': {
@@ -23,7 +46,7 @@ const Home = () => {
         // border: "1px solid red",
       },
       '& .MuiTab-root.Mui-selected': {
-        color: '#eaaeff',
+        color: '#eaaeff'
       },
       '& button': {
         color: 'white',
@@ -37,17 +60,22 @@ const Home = () => {
         backgroundColor: 'blue'
       }
       // style to show focused button coloured
-      
-
     }
   });
 
   const [value, setValue] = React.useState(0);
-
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
   const classes = useStyles();
+
+  const [toggle, setToggle] = useState(false);
+
+  const { userInfo } = useSelector(state => state.userLogin);
+  console.log(userInfo);
+  const handleAlert = () => {
+    alert('Please login first');
+  };
 
   return (
     <>
@@ -60,10 +88,15 @@ const Home = () => {
         </div>
 
         <div className="button-div">
-          <a href="">
-            {' '}
-            <button type="button">Upload project</button>
-          </a>
+          {userInfo ? (
+            <Link to="/upload">
+              <button type="button">Upload project</button>
+            </Link>
+          ) : (
+            <Link onClick={handleAlert}>
+              <button type="button">Upload project</button>
+            </Link>
+          )}
 
           <Link to="/register">
             <button type="button"> Register today</button>
@@ -87,10 +120,10 @@ const Home = () => {
       </div>
       <div className="featured">
         <div className="header">
-        <h1 className="heading ">Featured Projects</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h1 className="heading ">Featured Projects</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
-      
+
         <br />
         <br />
         <div className="slider">
@@ -135,21 +168,36 @@ const Home = () => {
             </Tabs>
           </Box>
         </div>
+
         <br />
         <br />
         <div className="title">
           <div className="left ">
-            <p ><span className='herotext'><h3 style={{width: "75px"}}>Top 3</h3></span>  of <span className='herotext'><h3 style={{width: "50px"}}> 109 </h3></span> NFT Projects</p>
+            <p>
+              <span className="herotext">
+                <h3 style={{ width: '75px' }}>Top 3</h3>
+              </span>{' '}
+              of{' '}
+              <span className="herotext">
+                <h3 style={{ width: '50px' }}> 109 </h3>
+              </span>{' '}
+              NFT Projects
+            </p>
           </div>
           <div className="right">
-            <p>View all</p>
+            <Link to="/list" style={{ textDecoration: 'none' }}>
+              {' '}
+              <p>View all</p>
+            </Link>
           </div>
         </div>
         <br />
         <div className="card-section">
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
+          {project &&
+            project.map((project, index) => {
+              if (index > 2) return;
+              return <ProjectCard project={project} />;
+            })}
         </div>
         <br />
         <br />

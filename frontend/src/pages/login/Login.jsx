@@ -21,7 +21,7 @@ const Login = () => {
     if (userInfo || serverData) {
       navigate('/');
     }
-  }, [history, userInfo, serverData]);
+  }, [ userInfo, serverData]);
 
   useEffect(() => {
     if (serverError === 'Request failed with status code 404') {

@@ -18,6 +18,7 @@ const Navbar = () => {
   //handling logout
   const handleLogout = () => {
     dispatch(userLogout());
+    alert('Logout Successful!!');
   };
   //showing please login first alert
   const handleAlert = () => {
@@ -32,7 +33,7 @@ const Navbar = () => {
             <Link to="/" style={{ textDecoration: 'none' }}>
               <img src={logo1} alt="logo" className="logo" />
             </Link>
-            <Link to="./projects" style={{ textDecoration: 'none' }}>
+            <Link to="./list" style={{ textDecoration: 'none' }}>
               <p>Projects</p>
             </Link>
             <Link to="./ranks" style={{ textDecoration: 'none' }}>
