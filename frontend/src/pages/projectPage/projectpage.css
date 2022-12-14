@@ -1,0 +1,367 @@
+.heroic {
+  background-image: url(../../assets/projectbg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+  background-color: #000000;
+  width: 100vw !important;
+  font-family: 'Questrial', sans-serif;
+  scrollbar-color: #57427d;
+  padding: 10px;
+}
+
+.project-intro {
+  display: flex;
+  flex-direction: row;
+  width: 1000px;
+  justify-content: space-between;
+  margin-top: 555px;
+}
+
+.pro-logo {
+  height: 150px;
+  width: 150px;
+  margin-left: -95px;
+}
+
+.project-name {
+  color: aliceblue;
+  font-family: 'Montserrat';
+  margin-left: -180px;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-name a {
+  font-size: 45px;
+  margin-top: 60px;
+  color: #f7e1ff;
+}
+
+.social-links2 {
+  width: 260px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: -50px;
+  margin-top: 60px;
+}
+
+.socials {
+  height: 50px;
+  width: 50px;
+}
+
+.project-interactions {
+  display: flex;
+  flex-direction: row;
+  width: 90vw;
+  justify-content: center;
+  padding-top: 150px;
+}
+
+.buttons {
+  display: flex;
+  width: 575px;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+.boxes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 30px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(14px);
+
+  border-radius: 15px;
+  display: flex;
+  border: #eaaeff 1.8px solid;
+  justify-content: center;
+  background: linear-gradient(
+    90deg,
+    #eaaeff 7.59%,
+    #d1adff 42.39%,
+    #a9d6ff 70.31%,
+    #ffffff 90.07%,
+    rgba(255, 255, 255, 0) 90.07%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.interactions {
+  display: flex;
+  flex-direction: row;
+  padding-left: 100px;
+}
+
+.icons {
+  height: 25px;
+  width: 25px;
+  padding: 4px 6px;
+}
+
+.boxes2 {
+  border-radius: 15px 0 0 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(14px);
+  display: flex;
+  align-items: center;
+}
+
+.boxes2 p {
+  color: white;
+  font-size: 15px;
+  padding: 5px;
+}
+
+.boxes3 {
+  border-radius: 0 15px 15px 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(14px);
+  display: flex;
+  align-items: center;
+}
+
+.project-details {
+  color: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-texts {
+  height: 400px;
+  width: 800px;
+  padding: 130px;
+  font-family: 'Montserrat';
+}
+
+.project-texts h1 {
+  color: #f7e1ff;
+  font-size: 35px;
+  font-weight: 700;
+  margin-top: -10px;
+}
+
+.project-texts h3 {
+  color: white;
+  font-size: 16px;
+  line-height: 40px;
+}
+
+.project-img {
+  margin-right: 95px;
+}
+
+.pimage {
+  height: 350px;
+  width: 350px;
+  padding: 140px;
+}
+
+.mile-head {
+  display: flex;
+  justify-content: center;
+  color: #f7e1ff;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 35px;
+  padding-bottom: 30px;
+}
+
+.mile-contents {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-family: 'Montserrat';
+  font-weight: 100;
+  font-size: 18px;
+  padding-bottom: 80px;
+}
+
+.chart {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 80px;
+}
+
+.graphs {
+  width: 1200px;
+  border-radius: 10px;
+}
+
+.show-header {
+  display: flex;
+  justify-content: center;
+  color: #f7e1ff;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 35px;
+  padding-bottom: 40px;
+}
+
+.show-contents {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-family: 'Montserrat';
+  font-weight: 100;
+  font-size: 18px;
+  padding-bottom: 60px;
+}
+
+.card-section {
+  display: flex;
+  justify-content: space-between;
+  width: 90vw;
+  padding: 90px;
+}
+
+.feature {
+  display: flex;
+  flex-direction: row;
+  width: 1500px;
+  justify-content: space-around;
+  color: #f7e1ff;
+}
+
+.feat {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  margin-left: -380px;
+}
+
+.feat2 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  margin-right: -380px;
+}
+
+.team-section h1 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  color: #eaaeff;
+  font-size: 25px;
+  padding-left: 100px;
+}
+
+.team-section p {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  color: whitesmoke;
+  width: 1200px;
+  padding-left: 100px;
+}
+
+.team-images {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 60px;
+  margin-left: -145px;
+}
+
+.ind-image {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(14px);
+  border-radius: 50%;
+  width: 125px;
+  height: 125px;
+  border: #eaaeff 1.8px solid;
+}
+
+.contact h1 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  color: #eaaeff;
+  font-size: 25px;
+  padding-left: 100px;
+  padding-top: 120px;
+}
+
+.contact-us {
+  display: flex;
+  flex-direction: row;
+}
+
+.contact-us p {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  color: whitesmoke;
+  width: 800px;
+  line-height: 40px;
+  padding-right: 60px;
+}
+
+.contact-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.contact-btn {
+  padding: 10px 10px 30px;
+  width: 280px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(14px);
+  height: 50px;
+  border-radius: 15px;
+  display: flex;
+  border: #eaaeff 1.6px solid;
+  justify-content: space-evenly;
+  color: whitesmoke;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+}
+
+.puku {
+  height: 25px;
+  width: 25px;
+}
+
+.hachu {
+  width: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.hachu span {
+  padding-right: 60px;
+}
+
+.line {
+  margin-top: 100px;
+  margin-bottom: 100px;
+
+  width: 90vw;
+  height: 0px;
+  color: whitesmoke;
+}
+
+.video {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 100px;
+}
