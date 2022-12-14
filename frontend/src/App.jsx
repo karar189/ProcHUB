@@ -15,12 +15,11 @@ import NewProject from './pages/newProject/NewProject';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-
 function App() {
   return (
     <>
       <Router>
-      <ToastContainer/>
+        <ToastContainer />
         <div className="navb">
           <Navbar />
         </div>
@@ -30,7 +29,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/ranks" elemnet={<Ranks />} />
-            <Route path="/projects" element={<Catalogue />} />
+            <Route path="/list" element={<Catalogue />} />
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
             <Route path="/upload" element={<NewProject />} />

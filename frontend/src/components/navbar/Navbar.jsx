@@ -33,7 +33,7 @@ const Navbar = () => {
             <Link to="/" style={{ textDecoration: 'none' }}>
               <img src={logo1} alt="logo" className="logo" />
             </Link>
-            <Link to="./projects" style={{ textDecoration: 'none' }}>
+            <Link to="./list" style={{ textDecoration: 'none' }}>
               <p>Projects</p>
             </Link>
             <Link to="./ranks" style={{ textDecoration: 'none' }}>
