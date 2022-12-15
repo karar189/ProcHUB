@@ -14,12 +14,12 @@
   background-color: #000000;
   /* overflow-x: hidden !important; */
   width: 100vw !important;
-  font-family: "Questrial", sans-serif;
+  font-family: 'Questrial', sans-serif;
   scrollbar-color: #57427d;
   padding: 10px;
 }
 .heading {
-  font-family: "Anton";
+  font-family: 'Anton';
   font-style: normal;
   font-weight: 400;
   font-size: 45px;
@@ -41,7 +41,7 @@
   text-fill-color: transparent;
 }
 .herotext h3 {
-  font-family: "Anton";
+  font-family: 'Anton';
   font-style: normal;
   font-weight: 400;
   font-size: 26px;
@@ -64,33 +64,30 @@
   text-fill-color: transparent;
 }
 
-.title .left p{
+.title .left p {
   font-family: 'Montserrat';
-font-style: normal;
-font-weight: 500;
-font-size: 22px;
-line-height: 49px;
-letter-spacing: 0.05em;
-color: #F7E1FF;
-display: flex;
-justify-content: center;
-align-items: center;
-padding: 5px;
-
-
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 49px;
+  letter-spacing: 0.05em;
+  color: #f7e1ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
 }
-.title .right p{
+.title .right p {
   font-family: 'Montserrat';
-font-style: normal;
-font-weight: 700;
-font-size: 20px;
-line-height: 29px;
-text-align: center;
-letter-spacing: 0.05em;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 29px;
+  text-align: center;
+  letter-spacing: 0.05em;
 
-color: #F7E1FF;
-padding: 10px;
-
+  color: #f7e1ff;
+  padding: 10px;
 }
 
 .button-div {
@@ -110,7 +107,7 @@ padding: 10px;
   height: 45px; */
   cursor: pointer;
 
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
@@ -173,7 +170,7 @@ padding: 10px;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
-  font-family: "Anton";
+  font-family: 'Anton';
   font-style: normal;
   font-weight: 400;
   font-size: 28.6121px;
@@ -183,7 +180,7 @@ padding: 10px;
   width: 100px;
 }
 .box p {
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;
   font-size: 1rem;
@@ -198,21 +195,18 @@ padding: 10px;
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
-  margin-top: 70px;
-  /* height: 100vh; */
+  margin-top: 50px;
 }
-.featured .header p{
+.featured .header p {
   width: 400px;
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.05em;
   color: #f7e1ff;
-  /* margin-top: -10px; */
   text-align: center;
-
 }
 
 .title {
@@ -220,14 +214,15 @@ padding: 10px;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 80vw;
+  width: 75vw;
+  height: 80px;
 }
 
-.card-section {
+.card-section-2 {
   display: flex;
   justify-content: space-evenly;
-  width: 90vw;
-  /* flex-direction: column; */
+  width: 83vw;
+  padding: 55px;
 }
 
 .upload-btn {
@@ -235,11 +230,9 @@ padding: 10px;
   backdrop-filter: blur(15px);
   border-radius: 12px;
   padding: 9px 20px;
-  /* width: 120px;
-  height: 45px; */
   cursor: pointer;
 
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
@@ -271,7 +264,7 @@ padding: 10px;
   justify-content: center;
   align-items: center;
   width: 100vw;
-  padding: 10px
+  padding: 10px;
   /* margin-top: -180px; */
 }
 
@@ -281,7 +274,7 @@ padding: 10px;
   justify-content: space-around;
   align-items: center;
   margin-top: 50px;
-  width: 80vw;
+  width: 92vw;
 
   padding: 10px 20px;
 }
@@ -293,7 +286,7 @@ padding: 10px;
   padding: 0 20px;
 }
 .about1-left h1 {
-  font-family: "Anton";
+  font-family: 'Anton';
   font-style: normal;
   font-weight: 400;
   font-size: 45px;
@@ -315,7 +308,7 @@ padding: 10px;
 }
 .about1-left p {
   width: 450px;
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -335,7 +328,7 @@ padding: 10px;
   padding: 20px 20px;
   text-decoration: none;
   color: #ffffff;
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
@@ -349,6 +342,6 @@ padding: 10px;
 .about1-right {
   display: flex;
   flex-direction: column;
-  width: 25vw;
+  width: 30vw;
   padding: 0 20px;
 }

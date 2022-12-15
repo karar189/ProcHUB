@@ -130,7 +130,7 @@ const Home = () => {
           {' '}
           <Box
             sx={{
-              maxWidth: { xs: 320, sm: 980 },
+              maxWidth: { xs: 320, sm: 1100 },
               bgcolor: 'transparent',
               color: 'white'
             }}
@@ -192,15 +192,14 @@ const Home = () => {
           </div>
         </div>
         <br />
-        <div className="card-section">
+        <div className="card-section-2">
           {project &&
             project.map((project, index) => {
               if (index > 2) return;
               return <ProjectCard project={project} />;
             })}
         </div>
-        <br />
-        <br />
+
         <div className="upload-btn">
           <a href="">Upload Your Project Today</a>
         </div>
