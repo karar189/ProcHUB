@@ -19,7 +19,7 @@ const Navbar = () => {
   //handling logout
   const handleLogout = () => {
     dispatch(userLogout());
-    alert('Logout Successful!!');
+    toast('Logout Successful!!');
   };
   //showing please login first alert
   const handleAlert = () => {
