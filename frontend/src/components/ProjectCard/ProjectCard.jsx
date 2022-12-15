@@ -55,13 +55,8 @@ const ProjectCard = ({ project }) => {
               {' '}
               <img src={twitter} alt={twitter} className="" />{' '}
             </a>
-            {/* <a href="">
-              {" "}
-              <img src={linkedn} alt={linkedn} className="" />{" "}
-            </a> */}
           </div>
           <div className="footer-card-right">
-            {/* <a type="button">View</a> */}
             <Link to={`/list/${project._id}`}>View</Link>
           </div>
         </div>

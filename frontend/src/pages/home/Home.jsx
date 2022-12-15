@@ -14,7 +14,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 
-import { getPosts } from '../../redux/actions/projectAction';
+import { getPosts, getPostById } from '../../redux/actions/projectAction';
 
 const Home = () => {
   const [counter, setCounter] = useState(true);
@@ -25,7 +25,11 @@ const Home = () => {
     dispatch(getPosts());
   }, [dispatch]);
 
-  useEffect(() => {}, [dispatch]);
+  useEffect(() => {
+    dispatch(getPostById());
+  }, [dispatch]);
+
+  // useEffect(() => {}, [dispatch]);
 
   if (counter) {
     dispatch(getPosts());
@@ -209,8 +213,9 @@ const Home = () => {
           <div className="about1-left">
             <h1>We are a decentralized platform</h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada, nunc vel
-              tincidunt lacinia, nisl nisl aliquam nunc, nec aliquam nisl nisl sit
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et
+              velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora
+              torquent per conubia nostra, per inceptos himenaeos.
             </p>
             <br />
             <div className="button">

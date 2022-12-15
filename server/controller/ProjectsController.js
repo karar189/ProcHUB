@@ -25,6 +25,8 @@ export const getProjectsById = async (req, res, next) => {
     res.status(200).json(Projectfetch);
   } catch (error) {
     res.status(404);
+    console.log(error.message);
+    console.log("assche routes er connetion");
     next(error);
   }
 };

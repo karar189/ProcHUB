@@ -20,26 +20,35 @@ import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 //Actions
-import { getPostById } from '../../redux/actions/projectAction';
+import { getPostById, getPosts } from '../../redux/actions/projectAction';
 
 const ProjectPage = ({ match }) => {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  const [projectId, setProjectId] = useState(match.params.id);
+  // const [projectId, setProjectId] = useState(match.params.id);
 
-  const getPostById = useSelector(state => state.getPostById);
-  const { loading, error, project } = getPostById;
+  // const getPostById = useSelector(state => state.getPostById);
+  // const { loading, error, project } = getPostById;
 
-  useEffect(() => {
-    if (projectId) {
-      dispatch(getProjectDetails(projectId));
-    }
-  }, [dispatch, projectId]);
+  // useEffect(() => {
+  //   if (projectId) {
+  //     dispatch(getProjectDetails(projectId));
+  //   }
+  // }, [dispatch, projectId]);
   // useEffect(() => {
   //   if (project && match.params.id !== project._id) {
   //     dispatch(getPostById(match.params.id));
   //   }
   // }, [dispatch, match, product]);
+  let { project, error, loading } = useSelector(state => state.userProject);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getPosts());
+  }, [dispatch]);
+
+  // useEffect(() => {
+  //   dispatch(getPostById());
+  // }, [dispatch]);
 
   return (
     <>

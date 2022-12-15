@@ -28,6 +28,7 @@ const Project = (state = initialstate, action) => {
       console.log(data);
       return { data: action.payload };
     case FETCH_BY_ID:
+      console.log(data);
       return { data: action.payload };
 
     // case UPDATEDETAILS:
