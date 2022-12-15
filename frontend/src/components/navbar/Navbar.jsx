@@ -15,7 +15,7 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const dispatch = useDispatch();
   const { userInfo } = useSelector(state => state.userLogin);
-  console.log(userInfo);
+  //console.log(userInfo);
   //handling logout
   const handleLogout = () => {
     dispatch(userLogout());

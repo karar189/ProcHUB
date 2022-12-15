@@ -19,9 +19,9 @@ const NewProject = () => {
     navigate('/list');
 
     dispatch(createPost(postTitle, postDesc, postImg));
-    console.log(postTitle);
-    console.log(postDesc);
-    console.log(postImg);
+    //console.log(postTitle);
+    //console.log(postDesc);
+    //console.log(postImg);
   };
 
   return (

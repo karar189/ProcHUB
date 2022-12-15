@@ -25,8 +25,8 @@ export const getProjectsById = async (req, res, next) => {
     res.status(200).json(Projectfetch);
   } catch (error) {
     res.status(404);
-    console.log(error.message);
-    console.log("assche routes er connetion");
+    //console.log(error.message);
+    //console.log("assche routes er connetion");
     next(error);
   }
 };
@@ -43,15 +43,15 @@ export const postProjects = async (req, res, next) => {
     username: User._id,
     featuredImage: image.selectedFile,
   };
-  console.log(newpost);
+  //console.log(newpost);
 
   var newProjects = new project(newpost);
   try {
-    console.log(req.body);
+    //console.log(req.body);
     await newProjects.save();
     res.status(201).json(newProjects);
   } catch (error) {
-    console.log(error.message);
+    //console.log(error.message);
     res.status(409).json({ message: error.message });
   }
 };

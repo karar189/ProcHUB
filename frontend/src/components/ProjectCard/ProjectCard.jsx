@@ -9,7 +9,7 @@ import linkedn from '../../assets/linkedn.svg';
 import proc1 from '../../assets/img-proc.png';
 
 const ProjectCard = ({ project }) => {
-  console.log(project);
+  //console.log(project);
   return (
     <>
       <div className="box-card">
@@ -61,7 +61,6 @@ const ProjectCard = ({ project }) => {
           </div>
         </div>
       </div>
-
       <div />
     </>
   );

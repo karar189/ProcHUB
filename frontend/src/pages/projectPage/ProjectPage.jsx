@@ -22,17 +22,24 @@ import { useSelector, useDispatch } from 'react-redux';
 
 //Actions
 import { getPostById, getPosts } from '../../redux/actions/projectAction';
+import { useParams } from 'react-router-dom';
 
-const ProjectPage = ({ match }) => {
-  let { project, error, loading } = useSelector(state => state.userProject);
+const ProjectPage = () => {
+  let { data:project, error, loading } = useSelector(state => state.userSingleProject);
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getPosts());
-  }, [dispatch]);
+
+  console.log(project, error, loading);
 
   // useEffect(() => {
-  //   dispatch(getPostById());
+  //   dispatch(getPosts());
   // }, [dispatch]);
+
+  // get the id from the url using useParams
+const { id } = useParams();
+
+  useEffect(() => {
+    dispatch(getPostById(id));
+  }, [dispatch]);
 
   return (
     <>
@@ -43,7 +50,7 @@ const ProjectPage = ({ match }) => {
           </div>
 
           <div className="project-name">
-            {/* <a> {project.title} </a> */}
+            <a> {project.title} </a> 
             <a> Hello World </a>
 
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -96,10 +103,6 @@ const ProjectPage = ({ match }) => {
             <h1>About project</h1>
             <h3>
               {project.body}
-              <br />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et
-              velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora
-              torquent per conubia nostra, per inceptos himenaeos.
             </h3>
           </div>
 

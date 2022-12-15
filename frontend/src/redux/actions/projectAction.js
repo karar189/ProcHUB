@@ -8,7 +8,9 @@ import {
   UPDATEDETAILS,
   FETCH_ALL_REQUEST,
   FETCH_ALL_ERROR,
-  FETCH_BY_ID
+  FETCH_BY_ID,
+  FETCH_BY_ID_REQUEST,
+  FETCH_BY_ID_ERROR
 } from '../actionTypes/projectConstants';
 
 const url = 'http://localhost:5000';
@@ -25,7 +27,7 @@ export const getPosts = () => async dispatch => {
     const { data } = await axios.get(url, config);
     dispatch({ type: FETCH_ALL, payload: data });
   } catch (error) {
-    console.log(error);
+    //console.log(error);
     dispatch({
       type: FETCH_ALL_ERROR,
       payload:
@@ -43,14 +45,14 @@ export const getPostById = id => async dispatch => {
   let url = 'http://localhost:5000' + '/users/project/' + id;
   try {
     dispatch({
-      type: FETCH_ALL_REQUEST
+      type: FETCH_BY_ID_REQUEST
     });
     const { data } = await axios.get(url, config);
     dispatch({ type: FETCH_BY_ID, payload: data });
   } catch (error) {
-    console.log(error);
+    //console.log(error);
     dispatch({
-      type: FETCH_ALL_ERROR,
+      type: FETCH_BY_ID_ERROR,
       payload:
         error.response && error.response.data.message
           ? error.response.data.message
@@ -72,11 +74,11 @@ export const createPost = (title, body, image) => async (dispatch, getState) => 
       }
     };
     const { data } = await axios.post(url + '/users/project', { title, body, image }, config);
-    console.log(data);
+    //console.log(data);
     const action = { type: CREATE, payload: data };
     dispatch(action);
   } catch (error) {
-    console.log(error);
+    //console.log(error);
   }
 };
 
@@ -93,12 +95,12 @@ export const getUpdates = id => async (dispatch, getState) => {
       }
     };
     const { data } = await axios.get(`${url}/${id}`, config);
-    // console.log("ACTION:", data);
+    // //console.log("ACTION:", data);
 
     const action = { type: UPDATEDETAILS, payload: data };
     dispatch(action);
   } catch (error) {
-    // console.log(error);
+    // //console.log(error);
   }
 };
 
@@ -114,13 +116,13 @@ export const updatePost = (id, title, body) => async (dispatch, getState) => {
         Authorization: `Bearer ${userInfo.token}`
       }
     };
-    // console.log(userInfo);
+    // //console.log(userInfo);
 
     const { data } = await axios.put(`${url}/${id}`, { title, body }, config);
     const action = { type: UPDATE, payload: data };
     dispatch(action);
   } catch (error) {
-    // console.log("error");
+    // //console.log("error");
   }
 };
 
@@ -140,6 +142,6 @@ export const deletePost = id => async (dispatch, getState) => {
     const action = { type: DELETE, payload: id };
     dispatch(action);
   } catch (error) {
-    // console.log(error);
+    // //console.log(error);
   }
 };

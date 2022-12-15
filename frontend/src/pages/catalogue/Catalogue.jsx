@@ -12,7 +12,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import { makeStyles } from '@mui/styles';
 
-import { getPosts, getPostById } from '../../redux/actions/projectAction';
+import { getPosts } from '../../redux/actions/projectAction';
 
 const Catalogue = () => {
   let { project, error, loading } = useSelector(state => state.userProject);
@@ -21,11 +21,11 @@ const Catalogue = () => {
     dispatch(getPosts());
   }, [dispatch]);
 
-  useEffect(() => {
-    dispatch(getPostById());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(getPostById());
+  // }, [dispatch]);
 
-  console.log(project, error, loading);
+  //console.log(project, error, loading);
   return (
     <>
       <div className="main-box">

@@ -48,11 +48,11 @@ const Login = () => {
     } else {
       setError('Please Provide Your Credentials Properly!');
     }
-    console.log(email);
-    console.log(password);
-    console.log(isAuthenticated);
-    console.log(serverError);
-    console.log(userInfo);
+    //console.log(email);
+    //console.log(password);
+    //console.log(isAuthenticated);
+    //console.log(serverError);
+    //console.log(userInfo);
   };
 
   return (

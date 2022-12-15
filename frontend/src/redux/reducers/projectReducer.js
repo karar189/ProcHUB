@@ -24,11 +24,10 @@ const Project = (state = initialstate, action) => {
       return { project: action.payload, loading: false, error: null };
     case FETCH_ALL_ERROR:
       return { error: action.payload, loading: false, project: [] };
+
     case CREATE:
-      console.log(data);
       return { data: action.payload };
     case FETCH_BY_ID:
-      console.log(data);
       return { data: action.payload };
 
     // case UPDATEDETAILS:
@@ -45,9 +44,11 @@ const Project = (state = initialstate, action) => {
     //   };
 
     default:
-      // console.log(project);
+      // //console.log(project);
       return state;
   }
 };
+
+
 
 export default Project;

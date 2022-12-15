@@ -34,11 +34,11 @@ const Home = () => {
 
   if (counter) {
     dispatch(getPosts());
-    console.log('dispatched');
+    //console.log('dispatched');
     setCounter(false);
   }
 
-  console.log(project, error, loading);
+  //console.log(project, error, loading);
 
   const useStyles = makeStyles({
     tabs: {
@@ -77,7 +77,7 @@ const Home = () => {
   const [toggle, setToggle] = useState(false);
 
   const { userInfo } = useSelector(state => state.userLogin);
-  console.log(userInfo);
+  //console.log(userInfo);
   const handleAlert = () => {
     toast('Please login first');
   };
