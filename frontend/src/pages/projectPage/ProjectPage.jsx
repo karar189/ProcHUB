@@ -25,7 +25,7 @@ import { getPostById, getPosts } from '../../redux/actions/projectAction';
 import { useParams } from 'react-router-dom';
 
 const ProjectPage = () => {
-  let { data:project, error, loading } = useSelector(state => state.userSingleProject);
+  let { data: project, error, loading } = useSelector(state => state.userSingleProject);
   const dispatch = useDispatch();
 
   console.log(project, error, loading);
@@ -35,7 +35,7 @@ const ProjectPage = () => {
   // }, [dispatch]);
 
   // get the id from the url using useParams
-const { id } = useParams();
+  const { id } = useParams();
 
   useEffect(() => {
     dispatch(getPostById(id));
@@ -50,10 +50,9 @@ const { id } = useParams();
           </div>
 
           <div className="project-name">
-            <a> {project.title} </a> 
-            <a> Hello World </a>
+            <a> {project.title} </a>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>{project.body}</p>
           </div>
 
           <div className="social-links2">
@@ -101,9 +100,7 @@ const { id } = useParams();
         <div className="project-details">
           <div className="project-texts">
             <h1>About project</h1>
-            <h3>
-              {project.body}
-            </h3>
+            <h3>{project.body}</h3>
           </div>
 
           <div className="project-img">

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import FileBase from 'react-file-base64';
+import './newProject.css';
 
 //Redux
 import { useDispatch } from 'react-redux';
@@ -25,13 +26,14 @@ const NewProject = () => {
   };
 
   return (
-    <div className="formbody">
+    <div className="formbody2">
       {/* {error ? <Alert severity="error">{error}</Alert> : ''} */}
 
-      <div className="form">
+      <div className="form2">
         <h2 style={{ color: 'white' }}>Upload Your Project</h2>
         <input
           type="text"
+          className="input-style"
           label="Note Title"
           id="margin-none"
           placeholder="Project Title"
@@ -40,19 +42,17 @@ const NewProject = () => {
         />
         <input
           type="text"
+          className="input-style"
           placeholder="Write project Description here....."
           value={postDesc}
           onChange={e => setpostDesc(e.target.value)}
         />
         {/* //to upload image input */}
-        <div
-          className="fileInput"
-          style={{ border: 'none', display: 'flex', justifyContent: 'center', width: '50%' }}
-        >
+        <div className="input-file">
           <FileBase
             type="file"
             placeholder="place image snapshots"
-            style={{ border: 'none', display: 'flex', justifyContent: 'center', width: '100%' }}
+            multiple={false}
             value={postImg}
             onDone={({ base64 }) => setpostImg({ selectedFile: base64 })}
           />

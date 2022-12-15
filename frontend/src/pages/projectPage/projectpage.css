@@ -33,7 +33,8 @@
 .project-name {
   color: aliceblue;
   font-family: 'Montserrat';
-  margin-left: -180px;
+  justify-content: flex-start;
+  width: 70%;
   display: flex;
   flex-direction: column;
 }
