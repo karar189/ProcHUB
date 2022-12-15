@@ -118,7 +118,7 @@ const Home = () => {
           </div>
           <div className="box">
             <h1>$150k</h1>
-            <p>Raised in revenue</p>
+            <p>Raised revenue</p>
           </div>
         </div>
       </div>
