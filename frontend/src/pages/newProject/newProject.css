@@ -2,9 +2,9 @@
   height: 100vh;
 }
 .form2 {
-  height: 50vh;
+  height: 60vh;
   position: relative;
-  top: 30vh;
+  top: 25vh;
   width: 700px;
   margin: 0 auto;
   background: linear-gradient(
@@ -28,10 +28,10 @@
   display: flex;
 
   width: 90%;
-  height: 50px;
+  height: 100px;
   border-radius: 10px;
   border: none;
-  padding: 0 20px;
+  padding: 10px 20px;
   margin-bottom: 20px;
   font-size: 18px;
   font-family: 'Montserrat';
