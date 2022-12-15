@@ -15,6 +15,7 @@ import comments from '../../assets/comment.svg';
 import graphs from '../../assets/Line chart.svg';
 import email from '../../assets/email.svg';
 import coffee from '../../assets/starbucks.svg';
+import { Container } from '@mui/material';
 
 import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
@@ -23,23 +24,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getPostById, getPosts } from '../../redux/actions/projectAction';
 
 const ProjectPage = ({ match }) => {
-  // const dispatch = useDispatch();
-
-  // const [projectId, setProjectId] = useState(match.params.id);
-
-  // const getPostById = useSelector(state => state.getPostById);
-  // const { loading, error, project } = getPostById;
-
-  // useEffect(() => {
-  //   if (projectId) {
-  //     dispatch(getProjectDetails(projectId));
-  //   }
-  // }, [dispatch, projectId]);
-  // useEffect(() => {
-  //   if (project && match.params.id !== project._id) {
-  //     dispatch(getPostById(match.params.id));
-  //   }
-  // }, [dispatch, match, product]);
   let { project, error, loading } = useSelector(state => state.userProject);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -59,9 +43,10 @@ const ProjectPage = ({ match }) => {
           </div>
 
           <div className="project-name">
-            <a> {project.title} </a>
+            {/* <a> {project.title} </a> */}
+            <a> Hello World </a>
 
-            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
 
           <div className="social-links2">
@@ -104,138 +89,140 @@ const ProjectPage = ({ match }) => {
           </button>
         </div>
       </div>
+      <br />
+      <Container>
+        <div className="project-details">
+          <div className="project-texts">
+            <h1>About project</h1>
+            <h3>
+              {project.body}
+              <br />
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et
+              velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora
+              torquent per conubia nostra, per inceptos himenaeos.
+            </h3>
+          </div>
 
-      <div className="project-details">
-        <div className="project-texts">
-          <h1>About project</h1>
-          <h3>
-            {project.body}
-            <br />
+          <div className="project-img">
+            <img src={projectimg} alt="image" className="pimage" />
+          </div>
+        </div>
+        <br />
+        <div className="milestones">
+          <div className="mile-head">Milestones</div>
+
+          <div className="mile-contents">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et
-            velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora
+            velit interdum ,ac aliquet <br /> odio mattis Class aptent taciti sociosqu ad litora
             torquent per conubia nostra, per inceptos himenaeos.
-          </h3>
+          </div>
+
+          <div className="chart">
+            <img src={graphs} alt="graphs" className="graphs" />
+          </div>
+        </div>
+        <br />
+        <div className="showcase">
+          <div className="show-header">Showcase</div>
+
+          <div className="show-contents">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et
+            velit interdum, ac aliquet <br /> odio mattis Class aptent taciti sociosqu ad litora
+            torquent per conubia nostra, per inceptos himenaeos.
+          </div>
+
+          <div className="video">
+            <iframe
+              width="720"
+              height="360"
+              src="https://www.youtube.com/embed/h7MYJghRWt0"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          </div>
         </div>
 
-        <div className="project-img">
-          <img src={projectimg} alt="image" className="pimage" />
-        </div>
-      </div>
-
-      <div className="milestones">
-        <div className="mile-head">Milestones</div>
-
-        <div className="mile-contents">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et
-          velit interdum ,ac aliquet <br /> odio mattis Class aptent taciti sociosqu ad litora
-          torquent per conubia nostra, per inceptos himenaeos.
-        </div>
-
-        <div className="chart">
-          <img src={graphs} alt="graphs" className="graphs" />
-        </div>
-      </div>
-
-      <div className="showcase">
-        <div className="show-header">Showcase</div>
-
-        <div className="show-contents">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et
-          velit interdum, ac aliquet <br /> odio mattis Class aptent taciti sociosqu ad litora
-          torquent per conubia nostra, per inceptos himenaeos.
-        </div>
-
-        <div className="video">
-          <iframe
-            width="720"
-            height="360"
-            src="https://www.youtube.com/embed/h7MYJghRWt0"
-            frameborder="0"
-            allowfullscreen
-          ></iframe>
-        </div>
-      </div>
-
-      <section className="cards">
+        {/* <section className="cards">
         <div className="feature">
           <div className="feat"> We were featured on</div>
 
           <div className="feat2">See all</div>
         </div>
 
-        {/* <div className="card-section">
+        <div className="card-section">
           <ProjectCard />
           <ProjectCard />
           <ProjectCard />
-        </div> */}
-      </section>
-
-      <section className="team-section">
-        <div>
-          <h1>The Team</h1>
-
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et
-            velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora
-            torquent per conubia nostra, per inceptos himenaeos.
-          </p>
         </div>
+      </section> */}
 
-        <div className="team-images">
-          <div className="ind-image">
-            <img src="" alt="" className="timg" />
+        <section className="team-section">
+          <div>
+            <h1>The Team</h1>
+
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et
+              velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora
+              torquent per conubia nostra, per inceptos himenaeos.
+            </p>
           </div>
 
-          <div className="ind-image">
-            <img src="" alt="" className="timg" />
-          </div>
-
-          <div className="ind-image">
-            <img src="" alt="" className="timg" />
-          </div>
-
-          <div className="ind-image">
-            <img src="" alt="" className="timg" />
-          </div>
-        </div>
-
-        <div className="contact">
-          <h1>Get in touch</h1>
-
-          <div className="contact-us">
-            <div>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero
-                et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad
-                litora torquent per conubia nostra, per inceptos himenaeos.
-              </p>
+          <div className="team-images">
+            <div className="ind-image">
+              <img src="" alt="" className="timg" />
             </div>
 
-            <div className="contact-buttons">
-              <button className="contact-btn">
-                <div className="hachu">
-                  {' '}
-                  <span>
-                    {' '}
-                    <img src={email} alt="email" className="puku" />{' '}
-                  </span>
-                  Send us an email{' '}
-                </div>
-              </button>
+            <div className="ind-image">
+              <img src="" alt="" className="timg" />
+            </div>
 
-              <button className="contact-btn">
-                <div className="hachu">
-                  <span>
-                    {' '}
-                    <img src={coffee} alt="coffee" className="puku" />{' '}
-                  </span>
-                  Buy us a coffee{' '}
-                </div>
-              </button>
+            <div className="ind-image">
+              <img src="" alt="" className="timg" />
+            </div>
+
+            <div className="ind-image">
+              <img src="" alt="" className="timg" />
             </div>
           </div>
-        </div>
-      </section>
+
+          <div className="contact">
+            <h1>Get in touch</h1>
+
+            <div className="contact-us">
+              <div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero
+                  et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad
+                  litora torquent per conubia nostra, per inceptos himenaeos.
+                </p>
+              </div>
+
+              <div className="contact-buttons">
+                <button className="contact-btn">
+                  <div className="hachu">
+                    {' '}
+                    <span>
+                      {' '}
+                      <img src={email} alt="email" className="puku" />{' '}
+                    </span>
+                    Send us an email{' '}
+                  </div>
+                </button>
+
+                <button className="contact-btn">
+                  <div className="hachu">
+                    <span>
+                      {' '}
+                      <img src={coffee} alt="coffee" className="puku" />{' '}
+                    </span>
+                    Buy us a coffee{' '}
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </Container>
 
       <hr className="line"></hr>
     </>

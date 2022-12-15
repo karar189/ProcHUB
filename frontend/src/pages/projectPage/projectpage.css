@@ -138,12 +138,12 @@
   color: whitesmoke;
   display: flex;
   justify-content: space-between;
+  margin-top: 50px;
 }
 
 .project-texts {
-  height: 400px;
-  width: 800px;
-  padding: 130px;
+  width: 60%;
+
   font-family: 'Montserrat';
 }
 
@@ -151,7 +151,6 @@
   color: #f7e1ff;
   font-size: 35px;
   font-weight: 700;
-  margin-top: -10px;
 }
 
 .project-texts h3 {
@@ -161,15 +160,18 @@
 }
 
 .project-img {
-  margin-right: 95px;
+  margin-top: 5px;
 }
 
 .pimage {
   height: 350px;
   width: 350px;
-  padding: 140px;
+  border-radius: 10px;
 }
 
+.milestones {
+  margin-top: 100px;
+}
 .mile-head {
   display: flex;
   justify-content: center;
@@ -178,7 +180,7 @@
   font-style: normal;
   font-weight: 700;
   font-size: 35px;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
 
 .mile-contents {
@@ -198,7 +200,7 @@
 }
 
 .graphs {
-  width: 1200px;
+  width: 900px;
   border-radius: 10px;
 }
 
@@ -260,7 +262,7 @@
   font-weight: 700;
   color: #eaaeff;
   font-size: 25px;
-  padding-left: 100px;
+  /* padding-left: 100px; */
 }
 
 .team-section p {
@@ -268,15 +270,15 @@
   font-style: normal;
   font-weight: 500;
   color: whitesmoke;
-  width: 1200px;
-  padding-left: 100px;
+  /* width: 1200px; */
+  /* padding-left: 100px; */
 }
 
 .team-images {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  padding-top: 60px;
+  padding-top: 20px;
   margin-left: -145px;
 }
 
@@ -295,8 +297,8 @@
   font-weight: 700;
   color: #eaaeff;
   font-size: 25px;
-  padding-left: 100px;
-  padding-top: 120px;
+
+  padding-top: 100px;
 }
 
 .contact-us {
