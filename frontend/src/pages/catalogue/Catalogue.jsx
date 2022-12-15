@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 import { color, Container } from '@mui/system';
 import { useDispatch, useSelector } from 'react-redux';
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import { makeStyles } from '@mui/styles';
 
@@ -30,7 +31,11 @@ const Catalogue = () => {
                 sx={{ background: 'transparent', color: '#ffff' }}
                 //expandicon
               >
-                <AccordionSummary aria-controls="panel1a-content" id="panel1a-header">
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon sx={{ color: 'white' }} />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
                   <Typography>All</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
@@ -39,7 +44,11 @@ const Catalogue = () => {
               </Accordion>
 
               <Accordion sx={{ background: 'transparent', color: '#ffff' }}>
-                <AccordionSummary aria-controls="panel1a-content" id="panel1a-header">
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon sx={{ color: 'white' }} />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
                   <Typography>Infrastrusture</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
@@ -57,7 +66,11 @@ const Catalogue = () => {
               </Accordion>
 
               <Accordion sx={{ background: 'transparent', color: '#ffff' }}>
-                <AccordionSummary aria-controls="panel1a-content" id="panel1a-header">
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon sx={{ color: 'white' }} />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
                   <Typography>DAPPs</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
@@ -65,7 +78,11 @@ const Catalogue = () => {
                 </AccordionDetails>
               </Accordion>
               <Accordion sx={{ background: 'transparent', color: '#ffff' }}>
-                <AccordionSummary aria-controls="panel1a-content" id="panel1a-header">
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon sx={{ color: 'white' }} />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
                   <Typography>NFT</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
@@ -73,7 +90,11 @@ const Catalogue = () => {
                 </AccordionDetails>
               </Accordion>
               <Accordion sx={{ background: 'transparent', color: '#ffff' }}>
-                <AccordionSummary aria-controls="panel1a-content" id="panel1a-header">
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon sx={{ color: 'white' }} />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
                   <Typography>Gaming</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
@@ -81,7 +102,11 @@ const Catalogue = () => {
                 </AccordionDetails>
               </Accordion>
               <Accordion sx={{ background: 'transparent', color: '#ffff' }}>
-                <AccordionSummary aria-controls="panel1a-content" id="panel1a-header">
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon sx={{ color: 'white' }} />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
                   <Typography>Ecosystem</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
