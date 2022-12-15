@@ -61,7 +61,7 @@ export const getPostById = id => async dispatch => {
   }
 };
 
-export const createPost = (title, body, image) => async (dispatch, getState) => {
+export const createPost = (title, body, image, desc) => async (dispatch, getState) => {
   try {
     const {
       userLogin: { userInfo }
@@ -73,75 +73,79 @@ export const createPost = (title, body, image) => async (dispatch, getState) => 
         Authorization: `Bearer ${userInfo.token}`
       }
     };
-    const { data } = await axios.post(url + '/users/project', { title, body, image }, config);
+    const { data } = await axios.post(
+      url + '/users/project',
+      { title, body, image, desc },
+      config
+    );
     //console.log(data);
     const action = { type: CREATE, payload: data };
     dispatch(action);
   } catch (error) {
-    //console.log(error);
+    console.log(error);
   }
 };
 
-export const getUpdates = id => async (dispatch, getState) => {
-  try {
-    const {
-      userLogin: { userInfo }
-    } = getState();
+// export const getUpdates = id => async (dispatch, getState) => {
+//   try {
+//     const {
+//       userLogin: { userInfo }
+//     } = getState();
 
-    const config = {
-      'Content-Type': 'application/json',
-      headers: {
-        Authorization: `Bearer ${userInfo.token}`
-      }
-    };
-    const { data } = await axios.get(`${url}/${id}`, config);
-    // //console.log("ACTION:", data);
+//     const config = {
+//       'Content-Type': 'application/json',
+//       headers: {
+//         Authorization: `Bearer ${userInfo.token}`
+//       }
+//     };
+//     const { data } = await axios.get(`${url}/${id}`, config);
+//     // //console.log("ACTION:", data);
 
-    const action = { type: UPDATEDETAILS, payload: data };
-    dispatch(action);
-  } catch (error) {
-    // //console.log(error);
-  }
-};
+//     const action = { type: UPDATEDETAILS, payload: data };
+//     dispatch(action);
+//   } catch (error) {
+//     // //console.log(error);
+//   }
+// };
 
-export const updatePost = (id, title, body) => async (dispatch, getState) => {
-  try {
-    const {
-      userLogin: { userInfo }
-    } = getState();
+// export const updatePost = (id, title, body) => async (dispatch, getState) => {
+//   try {
+//     const {
+//       userLogin: { userInfo }
+//     } = getState();
 
-    const config = {
-      'Content-Type': 'application/json',
-      headers: {
-        Authorization: `Bearer ${userInfo.token}`
-      }
-    };
-    // //console.log(userInfo);
+//     const config = {
+//       'Content-Type': 'application/json',
+//       headers: {
+//         Authorization: `Bearer ${userInfo.token}`
+//       }
+//     };
+//     // //console.log(userInfo);
 
-    const { data } = await axios.put(`${url}/${id}`, { title, body }, config);
-    const action = { type: UPDATE, payload: data };
-    dispatch(action);
-  } catch (error) {
-    // //console.log("error");
-  }
-};
+//     const { data } = await axios.put(`${url}/${id}`, { title, body }, config);
+//     const action = { type: UPDATE, payload: data };
+//     dispatch(action);
+//   } catch (error) {
+//     // //console.log("error");
+//   }
+// };
 
-export const deletePost = id => async (dispatch, getState) => {
-  try {
-    const {
-      userLogin: { userInfo }
-    } = getState();
+// export const deletePost = id => async (dispatch, getState) => {
+//   try {
+//     const {
+//       userLogin: { userInfo }
+//     } = getState();
 
-    const config = {
-      'Content-Type': 'application/json',
-      headers: {
-        Authorization: `Bearer ${userInfo.token}`
-      }
-    };
-    await axios.delete(`${url}/${id}`, config);
-    const action = { type: DELETE, payload: id };
-    dispatch(action);
-  } catch (error) {
-    // //console.log(error);
-  }
-};
+//     const config = {
+//       'Content-Type': 'application/json',
+//       headers: {
+//         Authorization: `Bearer ${userInfo.token}`
+//       }
+//     };
+//     await axios.delete(`${url}/${id}`, config);
+//     const action = { type: DELETE, payload: id };
+//     dispatch(action);
+//   } catch (error) {
+//     // //console.log(error);
+//   }
+// };

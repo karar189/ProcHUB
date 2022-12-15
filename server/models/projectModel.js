@@ -20,6 +20,10 @@ const projectSchema = new Schema({
     type: String,
     default: null,
   },
+  desc: {
+    type: String,
+    default: null,
+  },
 });
 
 const Project = mongoose.model("Project", projectSchema);

@@ -100,11 +100,11 @@ const ProjectPage = () => {
         <div className="project-details">
           <div className="project-texts">
             <h1>About project</h1>
-            <h3>{project.body}</h3>
+            <h3>{project.desc}</h3>
           </div>
 
           <div className="project-img">
-            <img src={projectimg} alt="image" className="pimage" />
+            <img src={project.featuredImage} alt="image" className="pimage" />
           </div>
         </div>
         <br />

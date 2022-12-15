@@ -12,6 +12,7 @@ const NewProject = () => {
   const [postTitle, setpostTitle] = useState();
   const [postDesc, setpostDesc] = useState();
   const [postImg, setpostImg] = useState();
+  const [postLongDesc, setpostLongDesc] = useState();
 
   const dispatch = useDispatch();
 
@@ -19,7 +20,7 @@ const NewProject = () => {
     event.preventDefault();
     navigate('/list');
 
-    dispatch(createPost(postTitle, postDesc, postImg));
+    dispatch(createPost(postTitle, postDesc, postImg, postLongDesc));
     //console.log(postTitle);
     //console.log(postDesc);
     //console.log(postImg);
@@ -46,6 +47,13 @@ const NewProject = () => {
           placeholder="Write project Description here....."
           value={postDesc}
           onChange={e => setpostDesc(e.target.value)}
+        />
+        <input
+          type="text"
+          className="input-style"
+          placeholder="Write project About here....."
+          value={postLongDesc}
+          onChange={e => setpostLongDesc(e.target.value)}
         />
         {/* //to upload image input */}
         <div className="input-file">
