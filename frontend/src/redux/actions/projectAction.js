@@ -7,7 +7,8 @@ import {
   DELETE,
   UPDATEDETAILS,
   FETCH_ALL_REQUEST,
-  FETCH_ALL_ERROR
+  FETCH_ALL_ERROR,
+  FETCH_BY_ID
 } from '../actionTypes/projectConstants';
 
 const url = 'http://localhost:5000';
@@ -23,6 +24,29 @@ export const getPosts = () => async dispatch => {
     });
     const { data } = await axios.get(url, config);
     dispatch({ type: FETCH_ALL, payload: data });
+  } catch (error) {
+    console.log(error);
+    dispatch({
+      type: FETCH_ALL_ERROR,
+      payload:
+        error.response && error.response.data.message
+          ? error.response.data.message
+          : error.message
+    });
+  }
+};
+
+export const getPostById = id => async dispatch => {
+  let config = {
+    'Content-Type': 'application/json'
+  };
+  let url = 'http://localhost:5000' + '/users/project/' + id;
+  try {
+    dispatch({
+      type: FETCH_ALL_REQUEST
+    });
+    const { data } = await axios.get(url, config);
+    dispatch({ type: FETCH_BY_ID, payload: data });
   } catch (error) {
     console.log(error);
     dispatch({

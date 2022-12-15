@@ -1,4 +1,5 @@
 import React from 'react';
+import { Routes, Route, Link, BrowserRouter as Router } from 'react-router-dom';
 import './project.css';
 import facebook from '../../assets/facebook2.svg';
 import github from '../../assets/Github.svg';
@@ -60,7 +61,8 @@ const ProjectCard = ({ project }) => {
             </a> */}
           </div>
           <div className="footer-card-right">
-            <a type="button">View</a>
+            {/* <a type="button">View</a> */}
+            <Link to={`/list/${project._id}`}>View</Link>
           </div>
         </div>
       </div>

@@ -5,7 +5,8 @@ import {
   DELETE,
   UPDATEDETAILS,
   FETCH_ALL_REQUEST,
-  FETCH_ALL_ERROR
+  FETCH_ALL_ERROR,
+  FETCH_BY_ID
 } from '../actionTypes/projectConstants';
 
 const initialstate = {
@@ -25,6 +26,8 @@ const Project = (state = initialstate, action) => {
       return { error: action.payload, loading: false, project: [] };
     case CREATE:
       console.log(data);
+      return { data: action.payload };
+    case FETCH_BY_ID:
       return { data: action.payload };
 
     // case UPDATEDETAILS:

@@ -15,6 +15,20 @@ export const getProjects = async (req, res, next) => {
   }
 };
 
+// @route: GET projects by id
+//@puropose : get all Projects from db for all user
+//@access public
+export const getProjectsById = async (req, res, next) => {
+  const { id: id } = req.params;
+  try {
+    const Projectfetch = await project.findById(id);
+    res.status(200).json(Projectfetch);
+  } catch (error) {
+    res.status(404);
+    next(error);
+  }
+};
+
 //@route: POST users/Projects
 //@purpose: : Post new Project by user
 export const postProjects = async (req, res, next) => {

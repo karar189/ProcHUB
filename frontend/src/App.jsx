@@ -29,11 +29,11 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/ranks" elemnet={<Ranks />} />
-            <Route path="/list" element={<Catalogue />} />
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
             <Route path="/upload" element={<NewProject />} />
-            <Route path="/projects/project-page" element={<ProjectPage />} />
+            <Route path="/list" element={<Catalogue />} />
+            <Route path="/list/:id" element={<ProjectPage />} />
           </Routes>
         </div>
 
