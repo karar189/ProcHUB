@@ -35,12 +35,13 @@ export const getProjectsById = async (req, res, next) => {
 //@purpose: : Post new Project by user
 export const postProjects = async (req, res, next) => {
   const User = await user.findOne({ _id: req.user._id });
-  var { title, body, image, desc } = req.body;
+  var { title, body, image, desc, yt } = req.body;
 
   const newpost = {
     title: title,
     body: body,
     desc: desc,
+    yt: yt,
     username: User._id,
     featuredImage: image.selectedFile,
   };

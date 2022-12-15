@@ -24,6 +24,10 @@ const projectSchema = new Schema({
     type: String,
     default: null,
   },
+  yt: {
+    type: String,
+    default: null,
+  },
 });
 
 const Project = mongoose.model("Project", projectSchema);

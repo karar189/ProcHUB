@@ -13,6 +13,7 @@ const NewProject = () => {
   const [postDesc, setpostDesc] = useState();
   const [postImg, setpostImg] = useState();
   const [postLongDesc, setpostLongDesc] = useState();
+  const [postyt, setpostyt] = useState();
 
   const dispatch = useDispatch();
 
@@ -20,10 +21,7 @@ const NewProject = () => {
     event.preventDefault();
     navigate('/list');
 
-    dispatch(createPost(postTitle, postDesc, postImg, postLongDesc));
-    //console.log(postTitle);
-    //console.log(postDesc);
-    //console.log(postImg);
+    dispatch(createPost(postTitle, postDesc, postImg, postLongDesc, postyt));
   };
 
   return (
@@ -54,6 +52,13 @@ const NewProject = () => {
           placeholder="Write project About here....."
           value={postLongDesc}
           onChange={e => setpostLongDesc(e.target.value)}
+        />
+        <input
+          type="text"
+          className="input-style"
+          placeholder="Paste Project Youtube EMBEDDED url here....."
+          value={postyt}
+          onChange={e => setpostyt(e.target.value)}
         />
         {/* //to upload image input */}
         <div className="input-file">

@@ -61,7 +61,7 @@ export const getPostById = id => async dispatch => {
   }
 };
 
-export const createPost = (title, body, image, desc) => async (dispatch, getState) => {
+export const createPost = (title, body, image, desc, yt) => async (dispatch, getState) => {
   try {
     const {
       userLogin: { userInfo }
@@ -75,7 +75,7 @@ export const createPost = (title, body, image, desc) => async (dispatch, getStat
     };
     const { data } = await axios.post(
       url + '/users/project',
-      { title, body, image, desc },
+      { title, body, image, desc, yt },
       config
     );
     //console.log(data);
