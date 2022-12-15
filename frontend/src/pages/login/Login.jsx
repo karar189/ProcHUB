@@ -6,6 +6,7 @@ import './login.css';
 //Redux
 import { userLogin } from '../../redux/actions/userAction';
 import { useDispatch, useSelector } from 'react-redux';
+import { toast } from 'react-toastify';
 const Login = () => {
   const navigate = useNavigate();
 
@@ -58,6 +59,10 @@ const Login = () => {
     <>
       <div className="formbody">
         {error ? <Alert severity="error">{error}</Alert> : ''}
+        {/* if error true then toast error using toastify */}
+        {/* {error ?? toast.error} */}
+        {/* {error ? toast.error(error) : ''} */}
+
         <div className="form">
           <h2 style={{ color: 'white' }}>Login</h2>
           <input

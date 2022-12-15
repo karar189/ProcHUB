@@ -15,6 +15,7 @@ import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 
 import { getPosts, getPostById } from '../../redux/actions/projectAction';
+import { toast } from 'react-toastify';
 
 const Home = () => {
   const [counter, setCounter] = useState(true);
@@ -78,7 +79,7 @@ const Home = () => {
   const { userInfo } = useSelector(state => state.userLogin);
   console.log(userInfo);
   const handleAlert = () => {
-    alert('Please login first');
+    toast('Please login first');
   };
 
   return (
