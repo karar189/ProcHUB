@@ -53,7 +53,7 @@ export const postProjects = async (req, res, next) => {
     await newProjects.save();
     res.status(201).json(newProjects);
   } catch (error) {
-    //console.log(error.message);
+    console.log(error.message);
     res.status(409).json({ message: error.message });
   }
 };

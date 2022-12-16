@@ -50,7 +50,7 @@ export const getPostById = id => async dispatch => {
     const { data } = await axios.get(url, config);
     dispatch({ type: FETCH_BY_ID, payload: data });
   } catch (error) {
-    //console.log(error);
+    // console.log(error);
     dispatch({
       type: FETCH_BY_ID_ERROR,
       payload:
@@ -82,7 +82,7 @@ export const createPost = (title, body, image, desc, yt) => async (dispatch, get
     const action = { type: CREATE, payload: data };
     dispatch(action);
   } catch (error) {
-    console.log(error);
+    console.log(error.message);
   }
 };
 

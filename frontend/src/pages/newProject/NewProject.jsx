@@ -26,8 +26,6 @@ const NewProject = () => {
 
   return (
     <div className="formbody2">
-      {/* {error ? <Alert severity="error">{error}</Alert> : ''} */}
-
       <div className="form2">
         <h2 style={{ color: 'white' }}>Upload Your Project</h2>
         <input
@@ -62,9 +60,14 @@ const NewProject = () => {
         />
         {/* //to upload image input */}
         <div className="input-file">
+          <label htmlFor="file" className="label-file">
+            <span style={{ color: 'white', marginRight: '10px' }}>
+              Upload Image (maxSize: 60kb)
+            </span>
+          </label>
+
           <FileBase
             type="file"
-            placeholder="place image snapshots"
             multiple={false}
             value={postImg}
             onDone={({ base64 }) => setpostImg({ selectedFile: base64 })}
