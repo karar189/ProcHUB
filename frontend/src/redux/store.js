@@ -5,11 +5,13 @@ import thunk from 'redux-thunk';
 // import { userLoginReducer, userRegisterReducer } from "./reducers/userReducer";
 import { userLoginReducer, userRegisterReducer } from './reducers/userReducer';
 import Project from './reducers/projectReducer';
+import SingleProjectReducer from './reducers/singleProjectReducer';
 
 const reducer = combineReducers({
   userLogin: userLoginReducer,
   userRegister: userRegisterReducer,
-  userProject: Project
+  userProject: Project,
+  userSingleProject: SingleProjectReducer
 });
 
 //GET user info from localstorage

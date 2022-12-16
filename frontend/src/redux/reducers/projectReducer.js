@@ -5,13 +5,14 @@ import {
   DELETE,
   UPDATEDETAILS,
   FETCH_ALL_REQUEST,
-  FETCH_ALL_ERROR
+  FETCH_ALL_ERROR,
+  FETCH_BY_ID
 } from '../actionTypes/projectConstants';
 
 const initialstate = {
   project: [],
   error: null,
-  // data: {},
+  data: {},
   loading: false
 };
 
@@ -22,13 +23,12 @@ const Project = (state = initialstate, action) => {
     case FETCH_ALL:
       return { project: action.payload, loading: false, error: null };
     case FETCH_ALL_ERROR:
-      return { error: action.payload , loading: false, project: []};  
-    
-    
-    
-    //   case CREATE:
-    //   //console.log(data);
-    //   return { data: action.payload };
+      return { error: action.payload, loading: false, project: [] };
+
+    case CREATE:
+      return { data: action.payload };
+    case FETCH_BY_ID:
+      return { data: action.payload };
 
     // case UPDATEDETAILS:
     //   return { project: action.payload };
@@ -44,9 +44,11 @@ const Project = (state = initialstate, action) => {
     //   };
 
     default:
-      // console.log(project);
+      // //console.log(project);
       return state;
   }
 };
+
+
 
 export default Project;

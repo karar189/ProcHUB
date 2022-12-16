@@ -73,7 +73,7 @@ export const getUsers = async (req, res) => {
 // @route: user/delete
 export const deleteUser = async (req, res) => {
   const { id: id } = req.params;
-  console.log(req.params);
+  //console.log(req.params);
   if (!Mongoose.Types.ObjectId.isValid(id))
     res.status(404).send("No post with that is Found");
   try {

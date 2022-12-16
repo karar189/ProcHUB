@@ -7,11 +7,26 @@ import user from "../models/userModel.js";
 //@puropose : get all Projects from db for single user
 export const getProjects = async (req, res, next) => {
   try {
-    const Projectfetch = await project
-      .find()
+    const Projectfetch = await project.find();
     res.status(200).json(Projectfetch);
   } catch (error) {
     res.status(404);
+    next(error);
+  }
+};
+
+// @route: GET projects by id
+//@puropose : get all Projects from db for all user
+//@access public
+export const getProjectsById = async (req, res, next) => {
+  const { id: id } = req.params;
+  try {
+    const Projectfetch = await project.findById(id);
+    res.status(200).json(Projectfetch);
+  } catch (error) {
+    res.status(404);
+    //console.log(error.message);
+    //console.log("assche routes er connetion");
     next(error);
   }
 };
@@ -20,21 +35,25 @@ export const getProjects = async (req, res, next) => {
 //@purpose: : Post new Project by user
 export const postProjects = async (req, res, next) => {
   const User = await user.findOne({ _id: req.user._id });
-  var { title, body, image } = req.body;
+  var { title, body, image, desc, yt } = req.body;
 
   const newpost = {
     title: title,
     body: body,
+    desc: desc,
+    yt: yt,
     username: User._id,
-    featuredImage: image,
+    featuredImage: image.selectedFile,
   };
+  //console.log(newpost);
 
   var newProjects = new project(newpost);
   try {
-    console.log(req.body);
+    //console.log(req.body);
     await newProjects.save();
     res.status(201).json(newProjects);
   } catch (error) {
+    console.log(error.message);
     res.status(409).json({ message: error.message });
   }
 };

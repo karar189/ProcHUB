@@ -22,7 +22,7 @@ export const notFound = (req, res, next) => {
 export const errorHandler = (err, req, res, next) => {
   const statusCode = res.statusCode === 200 ? 500 : res.statusCode;
   res.status(statusCode);
-  console.log(err.message);
+  //console.log(err.message);
   res.json({
     success: false,
     message: err.message,

@@ -1,0 +1,126 @@
+.formbody2 {
+  height: 100vh;
+}
+.form2 {
+  height: 60vh;
+  position: relative;
+  top: 25vh;
+  width: 700px;
+  margin: 0 auto;
+  background: linear-gradient(
+    90deg,
+    rgba(247, 225, 255, 0.25) 0.63%,
+    rgba(114, 162, 255, 0.167969) 33.23%,
+    rgba(232, 89, 255, 0.25) 69.46%,
+    rgba(247, 225, 255, 0.1675) 100%
+  );
+  backdrop-filter: blur(80px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form2 .input-style {
+  display: flex;
+
+  width: 90%;
+  height: 100px;
+  border-radius: 10px;
+  border: none;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+
+  text-align: center;
+  color: #e7e7e7;
+  background: transparent;
+  border: 1px solid #fafafa;
+}
+.form2 input:focus {
+  outline: none;
+}
+.form2 input::placeholder {
+  color: #bebebe93;
+}
+.form2 .button-class {
+  display: flex;
+  justify-content: space-evenly;
+  width: 70%;
+}
+
+.form2 button {
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  padding: 0 20px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #e7e7e7;
+  background: linear-gradient(
+    90deg,
+    rgba(247, 225, 255, 0.541) 0.63%,
+    rgba(114, 161, 255, 0.575) 33.23%,
+    rgba(233, 89, 255, 0.507) 69.46%,
+    rgba(247, 225, 255, 0.479) 100%
+  );
+  cursor: pointer;
+}
+.form2 button:hover {
+  background: #e7e7e7;
+  color: #000;
+  transition: 0.4 ease;
+}
+.form2 #input-file {
+  display: flex;
+
+  width: 90%;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  padding: 0 20px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+
+  text-align: center;
+  color: #e7e7e7;
+  background: transparent;
+  /* border: 1px solid #fafafa; */
+}
+.input-file {
+  padding-bottom: 20px;
+}
+.input-file input[type='file' i] {
+  color: #e7e7e7;
+  background: transparent;
+}
+.input-file input[type='file' i]::-webkit-file-upload-button {
+  padding: 5px 10px;
+  border: none;
+  background: #e7e7e7;
+  color: #000;
+  cursor: pointer;
+  border-radius: 20px;
+  margin-right: 10px;
+}

@@ -1,7 +1,7 @@
 .main-box {
   height: 250%;
   position: relative;
-  top: 20vh;
+  top: 25vh;
   display: flex;
   justify-content: center;
   padding-bottom: 200px;
@@ -11,19 +11,23 @@
   justify-content: space-between;
 }
 .left-filter {
-  width: 40%;
+  width: 30%;
   height: 100%;
   background-color: #1a1a1a;
   padding: 20px;
   border-radius: 10px;
-  margin-right: 20px;
+  margin-right: 60px;
 }
 .right-content {
+  width: 100%;
+}
+.inner-right {
   display: flex;
-  justify-content: space-evenly;
-
+  justify-content: space-between;
+  padding-left: 10px;
   align-items: center;
   flex-wrap: wrap;
+  width: 100%;
 }
 .card-box {
   padding: 100px;

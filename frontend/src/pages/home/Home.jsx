@@ -8,13 +8,15 @@ import ProjectCard from '../../components/ProjectCard/ProjectCard';
 import { Link } from 'react-router-dom';
 import './home.css';
 import illustration from '../../assets/Decentralised.svg';
+import blogimg from '../../assets/blogimg.svg';
 import { makeStyles } from '@mui/styles';
 
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 
-import { getPosts } from '../../redux/actions/projectAction';
+import { getPosts, getPostById } from '../../redux/actions/projectAction';
+import { toast } from 'react-toastify';
 
 const Home = () => {
   const [counter, setCounter] = useState(true);
@@ -25,15 +27,19 @@ const Home = () => {
     dispatch(getPosts());
   }, [dispatch]);
 
-  useEffect(() => {}, [dispatch]);
+  useEffect(() => {
+    dispatch(getPostById());
+  }, [dispatch]);
+
+  // useEffect(() => {}, [dispatch]);
 
   if (counter) {
     dispatch(getPosts());
-    console.log('dispatched');
+    //console.log('dispatched');
     setCounter(false);
   }
 
-  console.log(project, error, loading);
+  //console.log(project, error, loading);
 
   const useStyles = makeStyles({
     tabs: {
@@ -72,9 +78,9 @@ const Home = () => {
   const [toggle, setToggle] = useState(false);
 
   const { userInfo } = useSelector(state => state.userLogin);
-  console.log(userInfo);
+  //console.log(userInfo);
   const handleAlert = () => {
-    alert('Please login first');
+    toast('Please login first');
   };
 
   return (
@@ -114,7 +120,7 @@ const Home = () => {
           </div>
           <div className="box">
             <h1>$150k</h1>
-            <p>Raised in revenue</p>
+            <p>Raised revenue</p>
           </div>
         </div>
       </div>
@@ -130,7 +136,7 @@ const Home = () => {
           {' '}
           <Box
             sx={{
-              maxWidth: { xs: 320, sm: 980 },
+              maxWidth: { xs: 320, sm: 1100 },
               bgcolor: 'transparent',
               color: 'white'
             }}
@@ -157,14 +163,6 @@ const Home = () => {
               <Tab label="Item Four" />
               <Tab label="Item Five" />
               <Tab label="Item Six" />
-              <Tab label="Item Seven" />
-              <Tab label="Item One" />
-              <Tab label="Item Two" />
-              <Tab label="Item Three" />
-              <Tab label="Item Four" />
-              <Tab label="Item Five" />
-              <Tab label="Item Six" />
-              <Tab label="Item Seven" />
             </Tabs>
           </Box>
         </div>
@@ -192,15 +190,14 @@ const Home = () => {
           </div>
         </div>
         <br />
-        <div className="card-section">
+        <div className="card-section-2">
           {project &&
             project.map((project, index) => {
               if (index > 2) return;
               return <ProjectCard project={project} />;
             })}
         </div>
-        <br />
-        <br />
+
         <div className="upload-btn">
           <a href="">Upload Your Project Today</a>
         </div>
@@ -210,8 +207,9 @@ const Home = () => {
           <div className="about1-left">
             <h1>We are a decentralized platform</h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada, nunc vel
-              tincidunt lacinia, nisl nisl aliquam nunc, nec aliquam nisl nisl sit
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et
+              velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora
+              torquent per conubia nostra, per inceptos himenaeos.
             </p>
             <br />
             <div className="button">
@@ -220,6 +218,25 @@ const Home = () => {
           </div>
           <div className="about1-right">
             <img src={illustration} alt="" />
+          </div>
+        </div>
+      </div>
+      <div className="about-main about section 1">
+        <div className="about1">
+          <div className="about1-right">
+            <img src={blogimg} style={{ width: '430px' }} />
+          </div>
+          <div className="about1-left">
+            <h1>We are a decentralized platform</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et
+              velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora
+              torquent per conubia nostra, per inceptos himenaeos.
+            </p>
+            <br />
+            <div className="button">
+              <a href="">Read More</a>
+            </div>
           </div>
         </div>
       </div>

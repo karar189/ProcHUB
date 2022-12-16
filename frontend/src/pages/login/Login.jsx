@@ -6,6 +6,7 @@ import './login.css';
 //Redux
 import { userLogin } from '../../redux/actions/userAction';
 import { useDispatch, useSelector } from 'react-redux';
+import { toast } from 'react-toastify';
 const Login = () => {
   const navigate = useNavigate();
 
@@ -15,13 +16,15 @@ const Login = () => {
 
   // REDUX
   const dispatch = useDispatch();
-  const { userInfo, isAuthenticated, serverError,serverData } = useSelector(state => state.userLogin);
+  const { userInfo, isAuthenticated, serverError, serverData } = useSelector(
+    state => state.userLogin
+  );
   // redirect to home page if logged in
   useEffect(() => {
     if (userInfo || serverData) {
       navigate('/');
     }
-  }, [ userInfo, serverData]);
+  }, [userInfo, serverData]);
 
   useEffect(() => {
     if (serverError === 'Request failed with status code 404') {
@@ -45,18 +48,23 @@ const Login = () => {
     } else {
       setError('Please Provide Your Credentials Properly!');
     }
-    console.log(email);
-    console.log(password);
-    console.log(isAuthenticated);
-    console.log(serverError);
-    console.log(userInfo);
+    //console.log(email);
+    //console.log(password);
+    //console.log(isAuthenticated);
+    //console.log(serverError);
+    //console.log(userInfo);
   };
 
   return (
     <>
       <div className="formbody">
         {error ? <Alert severity="error">{error}</Alert> : ''}
+        {/* if error true then toast error using toastify */}
+        {/* {error ?? toast.error} */}
+        {/* {error ? toast.error(error) : ''} */}
+
         <div className="form">
+          <h2 style={{ color: 'white' }}>Login</h2>
           <input
             id="email"
             label="Email Address"
@@ -64,7 +72,7 @@ const Login = () => {
             autoComplete="email"
             placeholder="Email"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={e => setEmail(e.target.value)}
           />
           <input
             name="password"
@@ -74,7 +82,7 @@ const Login = () => {
             autoComplete="current-password"
             placeholder="Password"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={e => setPassword(e.target.value)}
           />
           <div className="button-class">
             <button type="submit" onClick={submitHandler}>

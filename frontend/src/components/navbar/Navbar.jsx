@@ -9,20 +9,21 @@ import { Routes, Route, Link, BrowserRouter as Router } from 'react-router-dom';
 import logo1 from '../../assets/elipse.svg';
 import search from '../../assets/search.svg';
 import profile from '../../assets/profile.svg';
+import { toast } from 'react-toastify';
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const dispatch = useDispatch();
   const { userInfo } = useSelector(state => state.userLogin);
-  console.log(userInfo);
+  //console.log(userInfo);
   //handling logout
   const handleLogout = () => {
     dispatch(userLogout());
-    alert('Logout Successful!!');
+    toast('Logout Successful!!');
   };
   //showing please login first alert
   const handleAlert = () => {
-    alert('Please login first');
+    toast('please login first');
   };
 
   return (
