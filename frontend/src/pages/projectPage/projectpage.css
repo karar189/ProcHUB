@@ -164,6 +164,9 @@
 .project-img {
   margin-top: 5px;
 }
+.project-img img {
+  object-fit: cover;
+}
 
 .pimage {
   height: 350px;
