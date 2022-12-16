@@ -38,7 +38,14 @@ const ProjectCard = ({ project }) => {
 
           <div className="about">
             <h2>About</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+
+            <p>
+              {project.desc != null && project.desc.length > 10
+                ? project.desc.substring(0, 60) + '...'
+                : project.desc}
+            </p>
+
+            {/* <p>{project.desc} </p> */}
           </div>
         </div>
         <div className="footer-card">

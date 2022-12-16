@@ -8,6 +8,7 @@ import ProjectCard from '../../components/ProjectCard/ProjectCard';
 import { Link } from 'react-router-dom';
 import './home.css';
 import illustration from '../../assets/Decentralised.svg';
+import blogimg from '../../assets/blogimg.svg';
 import { makeStyles } from '@mui/styles';
 
 import Tabs from '@mui/material/Tabs';
@@ -162,14 +163,6 @@ const Home = () => {
               <Tab label="Item Four" />
               <Tab label="Item Five" />
               <Tab label="Item Six" />
-              <Tab label="Item Seven" />
-              <Tab label="Item One" />
-              <Tab label="Item Two" />
-              <Tab label="Item Three" />
-              <Tab label="Item Four" />
-              <Tab label="Item Five" />
-              <Tab label="Item Six" />
-              <Tab label="Item Seven" />
             </Tabs>
           </Box>
         </div>
@@ -225,6 +218,25 @@ const Home = () => {
           </div>
           <div className="about1-right">
             <img src={illustration} alt="" />
+          </div>
+        </div>
+      </div>
+      <div className="about-main about section 1">
+        <div className="about1">
+          <div className="about1-right">
+            <img src={blogimg} style={{ width: '430px' }} />
+          </div>
+          <div className="about1-left">
+            <h1>We are a decentralized platform</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et
+              velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora
+              torquent per conubia nostra, per inceptos himenaeos.
+            </p>
+            <br />
+            <div className="button">
+              <a href="">Read More</a>
+            </div>
           </div>
         </div>
       </div>
