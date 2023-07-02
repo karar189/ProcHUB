@@ -1,7 +1,7 @@
 import { generateToken } from "../utils/generateToken.js";
 import user from "../models/userModel.js";
 import Mongoose from "mongoose";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 import { catchAsync } from "../utils/catchAsync.js";
 
 //@purpose: new user and get token
@@ -24,11 +24,11 @@ export const registerUser = catchAsync(async (req, res, next) => {
     password,
   });
 
-    res.json({
-      _id: User._id,
-      name: User.username,
-      password: User.password,
-    });
+  res.json({
+    _id: User._id,
+    name: User.username,
+    password: User.password,
+  });
 });
 
 // @purpose: Auth user and get token

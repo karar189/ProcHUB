@@ -5,6 +5,7 @@ import {
   deleteUser,
   getUsers,
 } from "../controller/UserController.js";
+
 const router = express.Router();
 
 router.get("/", getUsers);

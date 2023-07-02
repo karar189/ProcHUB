@@ -1,5 +1,20 @@
-FROM node:14-slim
-WORKDIR /usr/nodeapp 
-COPY package*.json ./
+# Use the official Node.js 14.x image as the base image
+FROM node:14
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy package.json and package-lock.json to the working directory
+COPY ./package*.json ./
+
+# Install dependencies
 RUN npm install
-CMD ["npm", "start"]
+
+# Copy the rest of the application files to the working directory
+COPY . .
+
+# Expose the port on which your Node.js application will run
+EXPOSE 5000
+
+# Start the Node.js application
+CMD [ "npm", "run","dev" ]
