@@ -6,7 +6,7 @@ import Home from './pages/home/Home';
 import Blogs from './pages/blogs/Blogs';
 import Ranks from './pages/ranks/Ranks';
 import Navbar from './components/navbar/Navbar';
-import Catalogue from './pages/catalogue/catalogue';
+import Catalogue from './pages/catalogue/Catalogue';
 import ProjectPage from './pages/projectPage/ProjectPage';
 import Register from './pages/register/Register';
 import Login from './pages/login/Login';
