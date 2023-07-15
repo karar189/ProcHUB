@@ -9,7 +9,7 @@ import Catalogue from './pages/catalogue/Catalogue';
 import ProjectPage from './pages/projectPage/ProjectPage';
 import Register from './pages/register/Register';
 import Login from './pages/login/Login';
-// import Footer from './components/footer/Footer';
+import Footer from './components/footer/Footer';
 import NewProject from './pages/newProject/NewProject';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -36,7 +36,7 @@ function App() {
           </Routes>
         </div>
 
-        {/* <Footer /> */}
+        <Footer />
       </Router>
     </>
   );
